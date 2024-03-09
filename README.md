@@ -16,9 +16,6 @@ The ordinal combination is used to evaluate the suitability of potential habitat
 | :---:   |
 | Forest (must be pines trees or cypress trees) |
 | Water body (must intersect with forest) |
-| :---:   |
 | Away from human disturbance (0.5 miles away from highway) |
-| :---:   |
 | Tree canopy cover percentage (20 to 60%) |
-| :---:   |
 | Low risk of lead poisoning (soil test result less than 100 ppm) |
