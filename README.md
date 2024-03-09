@@ -15,7 +15,6 @@ The ordinal combination is used to evaluate the suitability of potential habitat
 | Criteria |
 | :---:   |
 | Forest (must be pines trees or cypress trees) |
-| :---:   |
 | Water body (must intersect with forest) |
 | :---:   |
 | Away from human disturbance (0.5 miles away from highway) |
