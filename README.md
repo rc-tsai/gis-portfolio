@@ -12,3 +12,6 @@ The ordinal combination is used to evaluate the suitability of potential habitat
 <img src="PerTCC.jpg" width="50%" height="50%">
 
 
+| Attempt | #1    | #2    |
+| :---:   | :---: | :---: |
+| Seconds | 301   | 283   |
