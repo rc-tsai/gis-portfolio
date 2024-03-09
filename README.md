@@ -9,7 +9,7 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify potential habitat. However, this is an intermediate result. The final result will be detailed, followed by the maps in the next few pages.
 
 <img src="Pbppm.jpg" width="50%" height="50%">
-<img src="PerTCC.jpg" width="50%" height="50%">
+<img src="d16d128b083ea0960aedb105616cd15d.png" width="50%" height="50%">
 
 
 | Criteria |
