@@ -67,9 +67,21 @@ Bald eagles have been found to be suffering from the consequences of lead poison
 
 <figure markdown>
   ![Pbppm](images/Pbppm.jpg)
-  ![PbRisk](images/PbRisk.jpgg)
+  ![PbRisk](images/PbRisk.jpg)
   <figcaption>Partners</figcaption>
 </figure>
+
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src="images/Pbppm.jpg" width="200"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="img/image2.png" width="300"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="img/image3.png" width="400"/>
+     </div>
+</div>
 
 
 _Tree canopy cover_\
