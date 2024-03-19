@@ -49,17 +49,12 @@ Following is the final result showing the optimal habitat for bald eagles in Geo
 
 The following counties in Georgia are identified as optimal habitats for bald eagles: Liberty, Ware, Camden, Calhoun, and Rabun. The optimal habitats are fewer than I expected. Limiting variables in this project include lead poisoning risk level, distance to highway, and forest type.
 
-|Suitable habitat in Southeast Georgia|
+
+
+|Tree Canopy Cover|Reclassify Tree Canopy Cover|
 |:-:|:-:|
 |![Tree Canopy Cover](images/Liberty.jpg)|![Reclassify Tree Canopy Cover](images/Ware.jpg)|
 
-|Suitable habitat in Southeast Georgia|
-|:-:|:-:|
-|![First Image](images/Liberty.jpg)|![Second Image](images/Ware.jpg)|
-
-|Suitable habitat in Southwest and Noreast Georgia|
-|:-:|:-:|
-|![Third Image](images/Calhoun.jpg)|![Fourth Image](images/Rabun.jpg)|
 
 
 The following criteria are used for creating intermediate and final maps
@@ -91,5 +86,5 @@ I clip the tree canopy cover raster by using the Georgia state boundary as a cli
 
 To better identify forest areas that are qualified for tree canopy cover requirements. I clipped tree canopy cover raster (Georgia) by using qualified forest areas (polygon) that are 0.5 miles away from the highway, within 1 mile of water body, are pine or cypress trees type, and have low risk of lead poisoning. I then converted the clipped raster into a polygon. Next, I used spatial join to join clipped raster to forest areas if cells are completely contained by forest areas and used field mapping to get the mean of tree canopy cover for each forest area. Note that each cell size is the same, so the average tree canopy cover percentage won’t be biased.
 
-_Workflow_
-<img src="images/workflow.png" width="50%" height="50%">
+_Workflow_\
+<img src="images/workflow.png" width="100%" height="100%">
