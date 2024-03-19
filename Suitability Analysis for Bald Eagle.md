@@ -81,7 +81,7 @@ To better identify forest areas that are qualified for tree canopy cover require
 <br>
 <br>
 _Away from human disturbance_\
-I created a 0.5-mile buffer around the highway to remove water bodies and forests that fall within the buffer. Category H in National Bald Eagle Management Guidelines regarding blasting and other loud, intermittent noises states that “[a]void blasting and other activities that produce extremely loud noises within 1/2 mile of active nests, unless the eagles have demonstrated greater tolerance to the activity (or similar activity) in the nesting area” (U.S. Fish and Wildlife Service, 2007). In this sense, highway traffic is considered intermittent noise pollution. A 0.5-mile buffer is considered appropriate. 
+I created a 0.5-mile buffer around the highway to remove water bodies and forests that fall within the buffer. Category H in National Bald Eagle Management Guidelines regarding blasting and other loud, intermittent noises states that “[a]void blasting and other activities that produce extremely loud noises within 1/2 mile of active nests, unless the eagles have demonstrated greater tolerance to the activity (or similar activity) in the nesting area” (U.S. Fish and Wildlife Service, 2007). In this sense, highway traffic is considered intermittent noise pollution. A 0.5-mile buffer is considered appropriate. <br>
 
 <br>
 
