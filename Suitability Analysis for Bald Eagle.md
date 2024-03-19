@@ -110,7 +110,7 @@ Bald eagles have been found to be suffering from the consequences of lead poison
 _Tree canopy cover_\
 I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The image on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
 
-|Tree Canopy Cover|Reclassify Tree Canopy Cover|
+|Tree Canopy Cover percentage (0 to 100%)|Reclassify Tree Canopy Cover percentage (0 to 100%)|
 |:-:|:-:|
 |![Tree Canopy Cover](images/TreeCanopyCover.jpg)|![Reclassify Tree Canopy Cover](images/PerTCC.jpg)|
 
