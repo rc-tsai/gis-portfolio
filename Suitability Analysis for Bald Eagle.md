@@ -50,11 +50,13 @@ Following is the final result showing the optimal habitat for bald eagles in Geo
 The following counties in Georgia are identified as optimal habitats for bald eagles: Liberty, Ware, Camden, Calhoun, and Rabun. The optimal habitats are fewer than I expected. Limiting variables in this project include lead poisoning risk level, distance to highway, and forest type.
 
 
-|Southeast Georgia|Lead(Pb) by risk|
+|Suitable habitat in East Georgia|Suitable habitat in Southeast Georgia|
 |:-:|:-:|
 |![First Image](images/Liberty.jpg)|![Second Image](images/Ware.jpg)|
 
-
+|Suitable habitat in Southwest Georgia|Suitable habitat in Northeast Georgia|
+|:-:|:-:|
+|![First Image](images/Calhoun.jpg)|![Second Image](images/Rabun.jpg)|
 
 The following criteria are used for creating intermediate and final maps
 
