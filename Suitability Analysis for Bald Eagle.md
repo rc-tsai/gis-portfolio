@@ -63,11 +63,16 @@ Although tree shape, size, and location are relatively more important than the t
 
 _Lead poisoning_\
 Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following are the screenshots regarding the Pb level in Georgia.
-<img src="images/Pbppm.jpg" width="50%" height="50%">
-<img src="images/PbRisk.jpg" width="50%" height="50%">
+
+<div style="display:flex;">
+    <img src="images/Pbppm.jpg" style="width:50%;" alt="Image 1">
+    <img src="images/PbRisk.jpg" style="width:50%;" alt="Image 2">
+</div>
+
 
 _Tree canopy cover_\
 I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The screenshot on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
+
 <img src="images/TreeCanopyCover.jpg" width="50%" height="50%">
 <img src="images/PerTCC.jpg" width="50%" height="50%">
 
