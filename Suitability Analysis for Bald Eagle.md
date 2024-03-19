@@ -44,13 +44,13 @@ _Rating schedule_
 <br>
 
 <p align="center">
-  <img width="460" height="300" src="images/SuitableHabitat.jpg">
+  <img width="80%" height="80%" src="images/SuitableHabitat.jpg">
 </p>
 
 <br>
 
 <p align="center">
-  <img width="460" height="300" src="images/Overview.jpg">
+  <img width="80%" height="80%" src="images/Overview.jpg">
 </p>
 
 <br>
