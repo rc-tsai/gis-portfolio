@@ -29,7 +29,7 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 <br>
 
 ## Suitability model
-The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify potential habitat. However, this is an intermediate result. The final result will be detailed, followed by the maps in the next few pages.
+The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify suitable habitat. I used 'Raster Calculator' to concatenate tree canopy cover percentage and lead (Pb) by ppm layers in ArcGIS Pro based on the constratins in the following table.
 
 _Rating schedule_
 | **Factor** | **Constraint** | **Factor Constraint** |
@@ -46,6 +46,10 @@ _Rating schedule_
 <p align="center">
   <img width="60%" height="60%" src="images/SuitableHabitat.jpg">
 </p>
+
+<p style="text-align: center;">Preliminary result of suitable habitat for Bald Eagle</p>
+
+
 
 <br>
 <br>
