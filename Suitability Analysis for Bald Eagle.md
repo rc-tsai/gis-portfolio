@@ -50,12 +50,13 @@ Following is the final result showing the optimal habitat for bald eagles in Geo
 The following counties in Georgia are identified as optimal habitats for bald eagles: Liberty, Ware, Camden, Calhoun, and Rabun. The optimal habitats are fewer than I expected. Limiting variables in this project include lead poisoning risk level, distance to highway, and forest type.
 
 
-
-|Tree Canopy Cover|Reclassify Tree Canopy Cover|
-|:-:|:-:|
+|Suitable habitat in Southeast Georgia|
+|---|
 |![Tree Canopy Cover](images/Liberty.jpg)|![Reclassify Tree Canopy Cover](images/Ware.jpg)|
 
-
+|Suitable habitat in Southwest and Northeast Georgia|
+|:-:|:-:|
+|![Tree Canopy Cover](images/Calhoun.jpg)|![Reclassify Tree Canopy Cover](images/Rabun.jpg)|
 
 The following criteria are used for creating intermediate and final maps
 
@@ -69,7 +70,7 @@ _Forest type_\
 Although tree shape, size, and location are relatively more important than the type of trees that bald eagles use for nesting, there are certain types of trees likely to meet nesting needs, such as pines, firs, oaks, spruces, and cottonwoods (Iowa Department of Natural Resources). With that being said, things are different in Georgia. It was found that approximately 95 percent of bald eagles’ nests are built in living, mature pine trees in Georgia (Georgia Department of Natural Resources). I converted the U.S. National Forest type image to a polygon, then selected the following forest types if they are in Georgia. I then remove forest areas not within 1 mile of the water body.
 
 _Lead poisoning_\
-Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following are the screenshots regarding the Pb level in Georgia.
+Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following images show the Pb level in Georgia.
 
 |Lead(Pb) by ppm|Lead(Pb) by risk|
 |:-:|:-:|
@@ -77,7 +78,7 @@ Bald eagles have been found to be suffering from the consequences of lead poison
 
 
 _Tree canopy cover_\
-I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The screenshot on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
+I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The image on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
 
 |Tree Canopy Cover|Reclassify Tree Canopy Cover|
 |:-:|:-:|
