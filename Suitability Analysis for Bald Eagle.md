@@ -92,4 +92,4 @@ I clip the tree canopy cover raster by using the Georgia state boundary as a cli
 To better identify forest areas that are qualified for tree canopy cover requirements. I clipped tree canopy cover raster (Georgia) by using qualified forest areas (polygon) that are 0.5 miles away from the highway, within 1 mile of water body, are pine or cypress trees type, and have low risk of lead poisoning. I then converted the clipped raster into a polygon. Next, I used spatial join to join clipped raster to forest areas if cells are completely contained by forest areas and used field mapping to get the mean of tree canopy cover for each forest area. Note that each cell size is the same, so the average tree canopy cover percentage won’t be biased.
 
 _Workflow_
-<img src="images/workflow.jpg" width="50%" height="50%">
+<img src="images/workflow.png" width="50%" height="50%">
