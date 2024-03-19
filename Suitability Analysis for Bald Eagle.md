@@ -45,14 +45,14 @@ _Rating schedule_
 
 
 <div style="display: flix; justify-content:center;">
-  <img src="images/SuitableHabitat.jpg" width="100%" height="80%">
+  <img src="images/SuitableHabitat.jpg" width="80%" height="80%">
 </div>
 
 <br>
 Following is the final result showing the optimal habitat for bald eagles in Georgia. I found that most of the optimal habitats are quite fragmented.
 
 <div style="display: flex; justify-content: center;">
-    <img src="images/Overview.jpg" width="50%" height="80%" alt="Overview Image">
+    <img src="images/Overview.jpg" width="80%" height="80%" alt="Overview Image">
 </div>
 
 <br>
