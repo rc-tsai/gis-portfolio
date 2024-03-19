@@ -45,14 +45,13 @@ _Rating schedule_
 
 <div align="center">
   
-<br>
+<br><br>
+<p align="center"> Preliminary result of suitable habitat for Bald Eagle</p>
 
 <p align="center">
   <img width="60%" height="60%" src="images/SuitableHabitat.jpg">
 </p>
 
-
-<p align="center"> Preliminary result of suitable habitat for Bald Eagle</p>
 
 <br>
 <br>
