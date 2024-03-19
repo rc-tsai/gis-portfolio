@@ -82,6 +82,7 @@ To better identify forest areas that are qualified for tree canopy cover require
 <br>
 <br>
 <br>
+
 _Away from human disturbance_\
 I created a 0.5-mile buffer around the highway to remove water bodies and forests that fall within the buffer. Category H in National Bald Eagle Management Guidelines regarding blasting and other loud, intermittent noises states that “[a]void blasting and other activities that produce extremely loud noises within 1/2 mile of active nests, unless the eagles have demonstrated greater tolerance to the activity (or similar activity) in the nesting area” (U.S. Fish and Wildlife Service, 2007). In this sense, highway traffic is considered intermittent noise pollution. A 0.5-mile buffer is considered appropriate.
 
@@ -105,6 +106,7 @@ Bald eagles have been found to be suffering from the consequences of lead poison
 |![First Image](images/Pbppm.jpg)|![Second Image](images/PbRisk.jpg)|
 
 <br>
+
 _Tree canopy cover_\
 I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The image on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
 
@@ -114,5 +116,6 @@ I clip the tree canopy cover raster by using the Georgia state boundary as a cli
 
 
 <br>
+
 _Workflow_\
 <img src="images/workflow.png" width="100%" height="100%">
