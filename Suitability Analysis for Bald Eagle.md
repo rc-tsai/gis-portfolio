@@ -32,7 +32,7 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify potential habitat. However, this is an intermediate result. The final result will be detailed, followed by the maps in the next few pages.
 
 _Rating schedule_
-| **Factor** | **Constraint** | **FC** |
+| **Factor** | **Constraint** | **Factor Constraint** |
 |---|---|---|
 |     Tree canopy cover percentage    |     < 20    |     0    |
 |          |     ≥ 20 AND < 60    |     1    |
@@ -43,12 +43,17 @@ _Rating schedule_
 
 <br>
 
-<img src="images/SuitableHabitat.jpg" width="100%" height="100%">
+
+<div style="display: flix; justify-content:center;">
+  <img src="images/SuitableHabitat.jpg" width="100%" height="80%">
+</div>
 
 <br>
 Following is the final result showing the optimal habitat for bald eagles in Georgia. I found that most of the optimal habitats are quite fragmented.
 
-<img src="images/Overview.jpg" width="50%" height="50%">
+<div style="display: flex; justify-content: center;">
+    <img src="images/Overview.jpg" width="50%" height="80%" alt="Overview Image">
+</div>
 
 <br>
 The following counties in Georgia are identified as optimal habitats for bald eagles: Liberty, Ware, Camden, Calhoun, and Rabun. The optimal habitats are fewer than I expected. Limiting variables in this project include lead poisoning risk level, distance to highway, and forest type.
