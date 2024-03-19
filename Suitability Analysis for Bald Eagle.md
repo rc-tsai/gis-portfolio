@@ -54,6 +54,8 @@ The following counties in Georgia are identified as optimal habitats for bald ea
 |---|
 |![Tree Canopy Cover](images/Liberty.jpg)|![Reclassify Tree Canopy Cover](images/Ware.jpg)|
 
+<br>
+
 |Suitable habitat in Southwest and Northeast Georgia|
 |:-:|:-:|
 |![Tree Canopy Cover](images/Calhoun.jpg)|![Reclassify Tree Canopy Cover](images/Rabun.jpg)|
