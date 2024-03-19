@@ -11,6 +11,8 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 | Tree canopy cover percentage (20 to 60%) |
 | Low risk of lead poisoning (soil test result less than 100 ppm) |
 
+<br>
+<br>
 
 ## Data used
 
@@ -23,6 +25,8 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 |     Georgia state boundary                 |     Vector: line         |                       |     https://www2.census.gov/geo/tiger/TIGER_RD18/STATE/13_GEORGIA/13/                                 |     State boundary                                                                              |     2023-01-06                |
 |     USGS National Geochemical Survey       |     Vector: point        |                       |     https://mrdata.usgs.gov/geochem/                                                                  |     geochemical analysis of soils                                                               |     Accesses on 2024-03-02    |
 
+<br>
+<br>
 
 ## Suitability model
 The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify potential habitat. However, this is an intermediate result. The final result will be detailed, followed by the maps in the next few pages.
@@ -64,19 +68,18 @@ Although tree shape, size, and location are relatively more important than the t
 _Lead poisoning_\
 Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following are the screenshots regarding the Pb level in Georgia.
 
-|First Image|Second Image|
+|Lead(Pb) by ppm|Lead(Pb) by risk|
 |:-:|:-:|
 |![First Image](images/Pbppm.jpg)|![Second Image](images/PbRisk.jpg)|
-
-
-
 
 
 _Tree canopy cover_\
 I clip the tree canopy cover raster by using the Georgia state boundary as a clipping feature. The preferred condition of tree canopy cover was found to range from 20 to 60 percent (Peterson, 1986). The screenshot on the left-hand side shows each cell's tree canopy cover percentage (0 to 100%). The one on the right-hand side is reclassified.
 
-<img src="images/TreeCanopyCover.jpg" width="50%" height="50%">
-<img src="images/PerTCC.jpg" width="50%" height="50%">
+|Tree Canopy Cover|Reclassify Tree Canopy Cover|
+|:-:|:-:|
+|![Tree Canopy Cover](images/TreeCanopyCover.jpg)|![Reclassify Tree Canopy Cover](images/PerTCC.jpg)|
+
 
 To better identify forest areas that are qualified for tree canopy cover requirements. I clipped tree canopy cover raster (Georgia) by using qualified forest areas (polygon) that are 0.5 miles away from the highway, within 1 mile of water body, are pine or cypress trees type, and have low risk of lead poisoning. I then converted the clipped raster into a polygon. Next, I used spatial join to join clipped raster to forest areas if cells are completely contained by forest areas and used field mapping to get the mean of tree canopy cover for each forest area. Note that each cell size is the same, so the average tree canopy cover percentage won’t be biased.
 
