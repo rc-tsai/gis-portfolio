@@ -94,6 +94,8 @@ Bald eagles’ primary food is fish, which might explain why bald eagles typical
 _Forest type_\
 Although tree shape, size, and location are relatively more important than the type of trees that bald eagles use for nesting, there are certain types of trees likely to meet nesting needs, such as pines, firs, oaks, spruces, and cottonwoods (Iowa Department of Natural Resources). With that being said, things are different in Georgia. It was found that approximately 95 percent of bald eagles’ nests are built in living, mature pine trees in Georgia (Georgia Department of Natural Resources). I converted the U.S. National Forest type image to a polygon, then selected the following forest types if they are in Georgia. I then remove forest areas not within 1 mile of the water body.
 
+<br>
+
 _Lead poisoning_\
 Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following images show the Pb level in Georgia.
 
