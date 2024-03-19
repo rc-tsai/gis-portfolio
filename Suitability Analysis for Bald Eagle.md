@@ -37,7 +37,7 @@ _Rating schedule_
 |          |     ≥ 100 AND < 400     |     1    |
 |          |     ≥ 400    |     2    |
 
-<img src="images/SuitableHabitat.jpg" width="50%" height="50%">
+<img src="images/SuitableHabitat.jpg" width="100%" height="100%">
 
 Following is the final result showing the optimal habitat for bald eagles in Georgia. I found that most of the optimal habitats are quite fragmented.
 
@@ -65,9 +65,19 @@ _Lead poisoning_\
 Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following are the screenshots regarding the Pb level in Georgia.
 
 
+<img class=mobile-image src="images/Pbppm.jpg" />
+<img class=mobile-image src="images/PbRisk.jpg" />
 
+<style>
+  .img {
+    display: inline-block;
+  }
+  img.mobile-image {
+	width: 49%;
+    display: inline-block;
+  }
+</style>
 
-<img class="image-align-left" src="images/Pbppm.jpg"/><img class="image-align-left" src="images/PbRisk.jpg"/>
 
 
 
