@@ -66,9 +66,8 @@ Bald eagles have been found to be suffering from the consequences of lead poison
 
 
 
-![Pbppm](images/Pbppm.jpg){: style="height:20px"}
-![PbRisk](images/PbRisk.jpg){: style="height:20px"}
 
+<img class="image-align-left" src="images/Pbppm.jpg"/><img class="image-align-left" src="images/PbRisk.jpg"/>
 
 
 
