@@ -43,7 +43,7 @@ _Rating schedule_
 |          |     ≥ 100 AND < 400     |     1    |
 |          |     ≥ 400    |     2    |
 
-<div align="center">
+</div>
   
 <br><br>
 <p align="center"> Preliminary result of suitable habitat for Bald Eagle</p>
