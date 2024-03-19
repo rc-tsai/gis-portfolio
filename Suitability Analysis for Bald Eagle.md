@@ -64,13 +64,12 @@ Although tree shape, size, and location are relatively more important than the t
 _Lead poisoning_\
 Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following are the screenshots regarding the Pb level in Georgia.
 
-<div style="display:flex;">
-    <img src="images/Pbppm.jpg" style="width:50%;" alt="Image 1">
-    <img src="images/PbRisk.jpg" style="width:50%;" alt="Image 2">
-</div>
 
-![Pbppm](images/Pbppm.jpg){: style="height:83px"}
-![PbRisk](images/PbRisk.jpg){: style="height:83px"}
+<figure markdown>
+  ![Pbppm](images/Pbppm.jpg)
+  ![PbRisk](images/PbRisk.jpgg)
+  <figcaption>Partners</figcaption>
+</figure>
 
 
 _Tree canopy cover_\
