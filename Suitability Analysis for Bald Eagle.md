@@ -43,6 +43,7 @@ _Rating schedule_
 
 <br>
 
+<img align="left" width="100" height="100" src="images/Picture.svg">
 
 ![SuitableHabitat.jpg](images/Picture.svg){ width="80%" height="80%" style="display: block; margin: 0 auto" }
 
