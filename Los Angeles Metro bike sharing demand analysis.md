@@ -34,6 +34,10 @@ Weekday bike trips share had gone from multimodal distribution to unimodal distr
 
 |2016|2017|
 |:-:|:-:|
+|<img src="images/LA Metro/2016-q3.png" width="60">)|![2017](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2017-q3.png)|
+
+|2016|2017|
+|:-:|:-:|
 |![2016](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2016-q3.png)|![2017](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2017-q3.png)|
 
 |2018|2019|
