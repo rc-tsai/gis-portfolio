@@ -48,12 +48,10 @@ Weekday bike trips share had gone from multimodal distribution to unimodal distr
 As the series of graphs show that the clear cut of the transformation from multimodal to unimodal distribution occurred during 2019 and 2020. However, the weekday bike trips share distribution are consistent during the period between 2016 and 2019, and the period between 2020 and 2023, respectively, even number of bike trips changed intensely during within two periods. This suggests that bike users from the same or different population might have same demand for shared-bike across the time of day.
 
 <p align="center">
-  <img width="60%" height="60%" src="images/SuitableHabitat.jpg">
+  <img width="60%" height="60%" src="images/LA-Metro/Metro-bike-trips-demand-(January - March)-by-years.png">
 </p>
 
-<p align="center"
-  <img width="60%" height="60%" src="images/LA Metro/Metro bike trips demand (January - March) by years.png">
-</p>
+
 
 ![Bike trips by years](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/Metro%20bike%20trips%20demand%20(January%20-%20March)%20by%20years.png)
 
