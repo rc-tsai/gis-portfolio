@@ -30,15 +30,46 @@ Bike sharing demand in urban environment is influenced by multiple factors inclu
 
 ## Result
 #### _Bike station buffer_
-In order to conduct the station-level analysis, the buffer with bike station is set to 300 meters as it is the appropriate buffer reported by a couple bike sharing demand analysis
-modeling papers. Considering bike share stations are concentrated in downtown Los Angeles, many of bike stations buffers overlap with each other, Thiessen polygon method is integrated into creating bike station buffer for each bike station (Figure 1) with a closer look at Thiessen polygon buffer (Figure 2). As a result, each observed characteristic (which will be addressed in the following section) is assigned to the nearest bike station given that the first law of geography is that “everything is related to everything else, but near things are more related than distant things.”
+In order to conduct the station-level analysis, the buffer with bike station is set to 300 meters as it is the appropriate buffer reported by a couple bike sharing demand analysis modeling papers.I construct Thiessen-Polygon buffer for each bike share station with road network distance (see ArcGIS ModelBuilder for detailed workflow). As a result, each observed characteristic (which will be addressed in the following section) is assigned to the nearest bike station given that the first law of geography is that “everything is related to everything else, but near things are more related than distant things.”
+
+<p align="center">Bike station Thiessen-Polygon Buffer</p>
+<p align="center">
+  <img width="60%" height="60%" src="images/LA Metro/ZoomIn.png">
+</p>
+
 <br><br>
-#### _Commercial point of interest_
+
+|Bike stations in West LA | Bike stations in Downtown LA|
+|:-:|:-:|
+|<img src="images/LA Metro/WestLA.png" width="130%">|<img src="images/LA Metro/DTLA.png" width="130%" >
+
+<br><br>
+#### _Bus stops_
 It should be noted that the cluster in West Hollywood area seems to have higher number of restaurants around bike station compared with other clusters. A possible explanation is that there are various touristy spots such as Dolby Theatre, Hollywood Walk of Fame, The Hollywood museum and other popular tourist destinations on Hollywood Boulevard.
+
+<p align="center"> Bus stops within 300m of bike stations</p>
+<p align="center">
+  <img width="75%" height="75%" src="images/LA Metro/Bus stop.png">
+</p>
 <br><br>
+
+#### _Restaurants_
+It should be noted that the cluster in West Hollywood area seems to have higher number of restaurants around bike station compared with other clusters. A possible explanation is that there are various touristy spots such as Dolby Theatre, Hollywood Walk of Fame, The Hollywood museum and other popular tourist destinations on Hollywood Boulevard.
+<p align="center"> Restaurants within 300m of bike stations</p>
+<p align="center">
+  <img width="75%" height="75%" src="images/LA Metro/Restaurant.png">
+</p>
+<br><br>
+
 #### _Jobs_
 As for the number of job counts, the workplace job counts data LEHD Origin-Destination Employment Statistics (LODES) is accessed from Census Bureau at census block level. The number of jobs within 300m buffer of bike station were assigned to each bike station for further analysis. In order to do so, centroid of each census block was calculated, each centroid comes with the number of jobs in the census block. Next, centroids were assigned to the nearest bike station. As shown in Figure 3, the number of jobs is higher for the cluster on the right-hand side, which is downtown Los Angeles. This is reasonable given that city center is usually the employment center. However, there is a noticeable buffer with higher number of jobs alone on the west of Beverly Hills, the reason for the higher number of job counts might be it located at Westwood Village. Westwood Village is a lively place bordering the UCLA campus with chain boutiques, movie theatres, restaurants and casual eateries.
+
+<p align="center"> Jobs within 300m of bike stations</p>
+<p align="center">
+  <img width="75%" height="75%" src="images/LA Metro/Job.png">
+</p>
 <br><br>
+
 #### _Bike trips_
 As it shown in Figure 4, bike stations in downtown Los Angeles has the higher number of bike trips. However, a couple stations along the coast have noticeable higher inbound bike trips. By comparing figure 3 with figure 4 with initial observation, we can suspect that the number of bike trips might have relationship with the number of jobs at this stage.
 <br><br>
