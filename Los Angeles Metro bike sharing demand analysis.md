@@ -32,6 +32,8 @@ As it shown in Figure 4, bike stations in downtown Los Angeles has the higher nu
 ### _Bike trips by weekdays and weekends_
 Weekday bike trips share had gone from multimodal distribution to unimodal distribution from 2016 to 2023. The following series of graphs provide the comparison for the bike trip distribution in the Quarter 3 (July to September) of the year from 2016 to 2023. The first graph in the series is being enlarged for legibility.
 
+<br>
+
 |2016|2017|
 |:-:|:-:|
 |<img src="images/LA Metro/2016-q3.png" width="90%">)|<img src="images/LA Metro/2017-q3.png" width="90%">|
@@ -49,13 +51,14 @@ As the series of graphs show that the clear cut of the transformation from multi
 
 <p align="center">Metro bike trips demand (January - March) by years</p>
 <p align="center">
-  <img width="60%" height="60%" src="images/LA Metro/Metro bike trips demand (January - March) by years.png">
+  <img width="60%" height="60%" src="images/LA Metro/Metro bike trips demand (January - March) by years.png" width="90%">
 </p>
 
+<br>
 
 Besides, there are some possible explanations for the transformation. The first explanation is that the COVID-19 pandemic has dramatically changed bike users’ travel behavior as in home-based telecommuting has been widely adopted since the outset of the pandemic, suggesting that the pandemic caused a shift in bike sharing demand equally on the bike user population. The second explanation for the transformation from multimodal to unimodal distribution might reflect the fact that dataset sampled from different observed groups. In order to test the idea, datasets of 2019 and 2022 are being compared. First, they are two groups before and after the pandemic, respectively. Second, the difference of bike trips between them are quite close, the number of bike trips are 92,124 and 85,171 for 2019 and 2022, respectively. The reason for not picking the 2016 and 2021 pair is that 2021 is the year just after the pandemic, the bike trips just started to bounce back, as a result, it might not be representative at large. The comparison of the pair 2019-2022 is provided as follows. In 2019, the demand started to increase sharply at 5am and first peaked at the 8-9am time window. The bike demand peaked at morning rush hours, suggesting that bike trips might made by workers, together with the second peak at 5pm, corresponding to morning and afternoon rush hours. As for 2022, bike demand was still started to increase at 5am but grows relatively smoothly, meaning that bike demand has shifted towards later part of the day, which can be identified visually readily.
 
 <p align="center">Comparison of Bike Trip Demand Between 2019 and 2022</p>
 <p align="center">
-  <img width="60%" height="60%" src="images/LA Metro/Weekday bike trips share (January - March).png">
+  <img width="60%" height="60%" src="images/LA Metro/Weekday bike trips share (January - March).png" width="90%">
 </p>
