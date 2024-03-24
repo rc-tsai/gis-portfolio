@@ -1,6 +1,6 @@
 ## Table of Content
 Research objective
-[Data used](/Suitability%20Analysis%20for%20Bald%20Eagle/Data%20used)
+[Data used](/Suitability Analysis for Bald Eagle/Data used)
 
 Result
 
