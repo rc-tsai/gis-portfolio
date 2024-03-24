@@ -1,3 +1,9 @@
+# Table of Content
+Research objective
+[Data used](https://github.com/rc-tsai/gis-portfolio/blob/main/Suitability%20Analysis%20for%20Bald%20Eagle.md 'Data used')
+Result
+
+
 ## Research objective
 
 This project attempts to identify bald eagles’ habitat in Georgia by looking for a natural environment that provides a suitable location and enough food sources. The criteria used for selecting a location are as follows.
@@ -28,7 +34,7 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 <br>
 <br>
 
-## Suitability model
+## Result
 The ordinal combination is used to evaluate the suitability of potential habitat for bald eagles in Georgia. I concatenated the layers to identify suitable habitat. I used 'Raster Calculator' to concatenate tree canopy cover percentage and lead (Pb) by ppm layers in ArcGIS Pro based on the constratins in the following table.
 
 <div align="center">
