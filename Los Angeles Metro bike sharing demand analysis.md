@@ -1,8 +1,8 @@
 ## Table of Content
-[Introduction](#Introduction)<br>
-[Bike sharing demand](#Bike-sharing-demand)<br>
-[Data source](#Data-source)<br>
-[Result](#Result)<br>
+- [Introduction](#Introduction)<br>
+- [Bike sharing demand](#Bike-sharing-demand)<br>
+- [Data source](#Data-source)<br>
+- [Result](#Result)<br>
 <br><br><br>
 
 
