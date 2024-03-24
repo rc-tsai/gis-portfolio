@@ -34,7 +34,7 @@ Weekday bike trips share had gone from multimodal distribution to unimodal distr
 
 |Suitable habitat in East Georgia|Suitable habitat in Southeast Georgia|
 |:-:|:-:|
-|![First Image](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2016-q3.png)|![Second Image](images/LA-Metro/2017-q3.png)|
+|![2016](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2016-q3.png)|![2017](https://github.com/rc-tsai/gis-portfolio/blob/main/images/LA%20Metro/2017-q3.png)|
 
 
 As the series of graphs show that the clear cut of the transformation from multimodal to unimodal distribution occurred during 2019 and 2020. However, the weekday bike trips share distribution are consistent during the period between 2016 and 2019, and the period between 2020 and 2023, respectively, even number of bike trips changed intensely during within two periods. This suggests that bike users from the same or different population might have same demand for shared-bike across the time of day.
