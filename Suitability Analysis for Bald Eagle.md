@@ -1,8 +1,7 @@
 ## Table of Content
-Research objective
-[Data used](#Data-used)
-
-Result
+[Research objective](#Research-objective)<br>
+[Data used](#Data-used)<br>
+[Result](#Result)<br>
 
 
 ## Research objective
