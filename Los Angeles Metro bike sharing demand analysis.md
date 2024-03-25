@@ -177,3 +177,23 @@ The Ocean Front Walk & Navy, Ocean Front Walk & North Venice and Dockweiler Beac
 As for the Glendon & Kinross station, it is located in West Village (a commercial dense area), which is in close proximity to the campus of the University of California, Los Angeles. Land use type for the areas marked in purple is public facility, commercial for the areas marked in orange, residential for the one marked in yellow. Given that the information about bike trips are anonymized, we cannot further conclude that these bike trips were made by student population without further information though we can highly suspect that.<br>
 
 Given that this project uses LA Metro Bike share 2023-q3 (July-September) data on analyzing bike share demand, the highly influential data points are expected to be the ones located or near tourist spots. The high number of tourist bike trips reflect the fact that people usually make more bike trips at those tourist spots, especially in tourist season. Given the limited time and ability of the author have, this project only analyzes the bike sharing demand in the context of tourist season, meaning that more variables related to recreational index could be included in the analysis.
+
+## Note
+ArcGIS ModelBuilder workflow <br><br>
+_Zoom in on the image to see the steps for constructing the Thiessen-Polygon buffer from network distance. The idea is conceptually fairly easy, so don't be intimidated by those boxes! Boxes in the upper part of the image represent the steps for building the network dataset._ <br><br>
+
+<p align="center">ArcGIS ModelBuilder workflow</p>
+<p align="center">
+  <img width="100%" height="100%" src="images/LA Metro/Model.png">
+</p>
+
+<br><br>
+
+### The basic idea is:
+First, construct buffer from points <br>
+Second, create Thiessen polygon from points <br>
+Third, extract Thiessen polygon line by using _Polygon to Line_ tool <br>
+Fourth, use _Intersect_ tool for the results from the first and third steps. <br>
+Fifth, extract buffer boundary by usingi _Polygon to Line_ again on the buffer, remember to dissolve! <br>
+Sixth, use _Feature to Polygon_ on the results from Fourth and Fifth steps. <br><br>
+_Note that this is just my understanding of constructing Thiessen-Polygon buffer, I'd love to know how you build it!_
