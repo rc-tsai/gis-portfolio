@@ -46,7 +46,7 @@ In order to conduct the station-level analysis, the buffer with bike station is 
 
 <br><br>
 #### _Bus stops_
-It should be noted that the cluster in West Hollywood area seems to have higher number of restaurants around bike station compared with other clusters. A possible explanation is that there are various touristy spots such as Dolby Theatre, Hollywood Walk of Fame, The Hollywood museum and other popular tourist destinations on Hollywood Boulevard.
+It's expected to see more bus stops in Downtown Los Angeles area given that it is one of the most concentrated employment centers in the city of LA.
 
 <p align="center"> Bus stops within 300m of bike stations</p>
 <p align="center">
