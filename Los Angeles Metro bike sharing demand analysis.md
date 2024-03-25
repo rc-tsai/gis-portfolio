@@ -3,7 +3,7 @@
 - [Bike sharing demand](#Bike-sharing-demand)<br>
 - [Data source](#Data-source)<br>
 - [Result](#Result)<br>
-- [ArcGIS ModelBuilder workflow (construct Thiessen-Polygon from network distance)](#ArcGIS-ModelBuilder-workflow-(construct-Thiessen-Polygon-from-network-distance))
+- [ArcGIS ModelBuilder workflow](#ArcGIS-ModelBuilder-workflow)
 <br><br><br>
 
 
@@ -179,7 +179,8 @@ As for the Glendon & Kinross station, it is located in West Village (a commercia
 
 Given that this project uses LA Metro Bike share 2023-q3 (July-September) data on analyzing bike share demand, the highly influential data points are expected to be the ones located or near tourist spots. The high number of tourist bike trips reflect the fact that people usually make more bike trips at those tourist spots, especially in tourist season. Given the limited time and ability of the author have, this project only analyzes the bike sharing demand in the context of tourist season, meaning that more variables related to recreational index could be included in the analysis.
 
-## ArcGIS ModelBuilder workflow (construct Thiessen Polygon from network distance)
+## ArcGIS ModelBuilder workflow
+
 <br><br>
 _Zoom in on the image to see the steps for constructing the Thiessen-Polygon buffer from network distance. The idea is conceptually fairly easy, so don't be intimidated by those boxes! Boxes in the upper part of the image represent the steps for building the network dataset._ <br><br>
 
