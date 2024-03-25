@@ -179,6 +179,8 @@ As for the Glendon & Kinross station, it is located in West Village (a commercia
 
 Given that this project uses LA Metro Bike share 2023-q3 (July-September) data on analyzing bike share demand, the highly influential data points are expected to be the ones located or near tourist spots. The high number of tourist bike trips reflect the fact that people usually make more bike trips at those tourist spots, especially in tourist season. Given the limited time and ability of the author have, this project only analyzes the bike sharing demand in the context of tourist season, meaning that more variables related to recreational index could be included in the analysis.
 
+<br><br>
+
 ## ArcGIS ModelBuilder_constructing Thiessen Polygon buffer
 
 <br><br>
