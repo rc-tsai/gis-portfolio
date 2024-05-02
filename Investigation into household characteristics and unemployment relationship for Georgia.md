@@ -38,10 +38,7 @@ Jin and Paulsen (2018) find that increases in job accessibility lead to decrease
 - Ordinary Least Regression
 - Spatial Regression
 
-## Methods
-- Gravity-based Accessibility Measure
-- Ordinary Least Regression
-- Spatial Regression
+<br><br>
 
 _Gravity-based Accessibility Measure_
 
