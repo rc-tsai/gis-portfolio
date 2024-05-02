@@ -38,4 +38,24 @@ Jin and Paulsen (2018) find that increases in job accessibility lead to decrease
 - Ordinary Least Regression
 - Spatial Regression
 
+## Methods
+- Gravity-based Accessibility Measure
+- Ordinary Least Regression
+- Spatial Regression
 
+_Gravity-based Accessibility Measure_
+
+The job accessibility index is adapted from gravity-based measure, and we define 30 min as the travel time threshold. Conceuptually speaking, the following formula penalizes the job accessibility based on the travel time between workers’ home and work location.
+
+
+$`A_{i} = \displaystyle\sum_{j}`$ $`[\frac{E_{j} \cdot f(d_{ij})}{\displaystyle\sum_{k} P_{k} \cdot f(d_{jk})}]`$
+
+$`A_{i}`$ = job accessibility in census tract 𝑖 (measured census tract)
+
+$`E_{j}`$ = number of jobs in census tract 𝑗
+
+$`P_{k}`$ = number of jobseekers (job competitors) in census tract 𝑘
+
+$`f(d_{ij} = e^{-\beta(k) \cdot t}`$ (time decay funtion, $`b`$ = non-negative time decay coefficient, $`t`$ = travel time in minute, $`k`$ = area type)
+
+_Note. Area type is categorized as Metropolitan area, Small town, or Rural area based on USDA Rural-Urban Commuting Area Codes_
