@@ -7,8 +7,8 @@
 - [Result](#Result)
 <br><br><br>
 
-## Background 
-##### (Back to [Table of Content](#Table-of-Content))
+## Background
+
 Considerable research has been conducted into various types of unemployment, with three major categories being structural, frictional, and cyclical unemployment. The Reserve Bank of Australia has provided clear explanations of these types.
 
 The first type, involuntary unemployment, arises from a mismatch between a worker's qualifications or skills and the requirements of available jobs, or when available jobs are geographically distant from job seekers. The second type, voluntary unemployment, occurs when workers voluntarily leave their current job to search for another, creating a transitional gap. The third type of unemployment occurs due to changes in economic activity during the business cycle, where the demand for workers by businesses is lower than the number of available job seekers.
@@ -18,7 +18,7 @@ A body of literature has examined unemployment at both macro and micro levels, e
 <br><br>
 
 ## Variable selection
-
+##### (Back to [Table of Content](#Table-of-Content))
 **_Social benefits (Public Assistance Income)_**
 * Alcan et al. (2016) maintain that receiving social benefits lead to protracted unemployment duration and a slower transition from unemployed to employed status (p. 2). Røed and Zhang (2003) find that a marginal increase in unemployment benefits reduces the escape rate from unemployment significantly, regardless business cycle conditions and unemployment duration (p. 204). Kupets (2006) find that recipients of unemployment benefits tend to have longer unemployment duration if they have income from casual work such farming (p. 244). I use the census variable on public assistance income which includes cash and non-cash benefits to low-income individuals or families. <br> <br>
 
@@ -73,6 +73,7 @@ This computation results in either a positive or negative integer. The positive 
 
 
 ## Methods
+##### (Back to [Table of Content](#Table-of-Content))
 - Gravity-based Accessibility Measure
 - Ordinary Least Regression
 - Spatial Regression
