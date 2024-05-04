@@ -17,8 +17,7 @@ A body of literature has examined unemployment at both macro and micro levels, e
 
 <br><br>
 
-## Variable selection
-##### (Back to [Table of Content](#Table-of-Content))
+## Variable selection (Back to [Table of Content](#Table-of-Content))
 **_Social benefits (Public Assistance Income)_**
 * Alcan et al. (2016) maintain that receiving social benefits lead to protracted unemployment duration and a slower transition from unemployed to employed status (p. 2). Røed and Zhang (2003) find that a marginal increase in unemployment benefits reduces the escape rate from unemployment significantly, regardless business cycle conditions and unemployment duration (p. 204). Kupets (2006) find that recipients of unemployment benefits tend to have longer unemployment duration if they have income from casual work such farming (p. 244). I use the census variable on public assistance income which includes cash and non-cash benefits to low-income individuals or families. <br> <br>
 
@@ -72,8 +71,7 @@ This computation results in either a positive or negative integer. The positive 
 </p>
 
 
-## Methods
-##### (Back to [Table of Content](#Table-of-Content))
+## Methods (Back to [Table of Content](#Table-of-Content))
 - Gravity-based Accessibility Measure
 - Ordinary Least Regression
 - Spatial Regression
