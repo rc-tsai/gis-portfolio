@@ -56,7 +56,7 @@ This would generate either a positive or negative value. The positive value can 
 
 <p align="center">Bike station Thiessen-Polygon Buffer</p>
 <p align="center">
-  <img width="60%" height="60%" src="images/JobAccessibility/relocate_pop.jpg">
+  <img width="60%" height="60%" src="../images/JobAccessibility/relocate_pop.jpg">
 </p>
 
 
