@@ -7,8 +7,8 @@
 - [Result](#Result)
 <br><br><br>
 
-## Background
-### ([Table of Content](#Table-of-Content))
+## Background 
+##### (Back to [Table of Content](#Table-of-Content))
 Considerable research has been conducted into various types of unemployment, with three major categories being structural, frictional, and cyclical unemployment. The Reserve Bank of Australia has provided clear explanations of these types.
 
 The first type, involuntary unemployment, arises from a mismatch between a worker's qualifications or skills and the requirements of available jobs, or when available jobs are geographically distant from job seekers. The second type, voluntary unemployment, occurs when workers voluntarily leave their current job to search for another, creating a transitional gap. The third type of unemployment occurs due to changes in economic activity during the business cycle, where the demand for workers by businesses is lower than the number of available job seekers.
