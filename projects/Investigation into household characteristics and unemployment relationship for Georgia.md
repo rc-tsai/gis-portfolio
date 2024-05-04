@@ -1,7 +1,7 @@
 ## Table of Content
 - [Background](#Background)<br>
-- [Variables selection](#Variable-selection)<br>
-- [Methods](#Method)<br>
+- [Variable selection](#Variable-selection)<br>
+- [Methods](#Methods)<br>
 - [Data assembly](#Data-assembly)<br>
 - [Data](#data)
 - [Result](#Result)
