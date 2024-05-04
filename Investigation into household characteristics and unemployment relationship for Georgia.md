@@ -1,9 +1,9 @@
 ## Table of Content
-- [Background](#Background)<br>
-- [Variables selection](#Variable-selection)<br>
-- [Methods](#Methods)<br>
-- [Data assembly](#Result)<br>
-- [Data](#ArcGIS-ModelBuilder_constructing-Thiessen-Polygon-buffer)
+- [Background]()<br>
+- [Variables selection]()<br>
+- [Methods]()<br>
+- [Data assembly]()<br>
+- [Data]()
 - [Result]()
 <br><br><br>
 
@@ -32,6 +32,33 @@ It's important to note the distinction between the measurements of Lower-paying 
 
 _Job Accessibility Index for lower-paying jobs_ <br>
 Jin and Paulsen (2018) find that increases in job accessibility lead to decreases in unemployment for African Americans. Their findings also show that increased job accessibility reduces unemployment and improves household income for low-income households (p. 108).
+
+_Dissimilarity_ <br>
+The dissimilarity index (Stoll & Covington, 2011) is a single value for the entire study area, it tells us percent of population in the study area need to relocate in order to achieve minimum job-worker dissimilarity. The equation for the dissimilarity index is computed as follows:
+
+$`D = \frac{1}{2} \displaystyle\sum_{i}^{n} | \frac{Black_{i}}{Black} - \frac{Employment_{i}}{Employment} |`$
+
+$`Black_{i}`$ = Black population residing in ZIP code $`i`$
+
+$`Black`$ = Total Black population in a given Metropolitan Statistical Area (MSA)
+
+$`Employment_{i}`$ = Jobs in each ZIP code
+
+$`Employment`$ = Total jobs in a Metropolitan Statistical Area
+
+To interpret the dissimilarity index, for instance, $`D = 0.518`$, Stoll & Covington (2011) state that "about 52 per cent of Blacks would have had to relocate within metropolitan areas towards job-rich areas to be distributed spatially in perfect the geographical distribution of jobs" (pp. 2504 - 2505). <br>
+
+However, the single value doesn’t tell us how many people needed to relocate from one census tract to another tract. But first, if $`Black`$ multiplied by 0.52, we have the total number of population that needed to relocate. To build on this point, let's say I want to know how many black population needed to move from a specific ZIP code, here is how we can do this as follows, the number of black population needed to move out from or move into a zip code can be denoted as follows:
+
+$` Relocate_{i} = Black \cdot  \frac{Black_{i}}{Black} - \frac{Employment_{i}}{Employment} `$
+
+This would generate either a positive or negative value. The positive value can be interpreted as the number of black population in zip coded $`i`$ needed to move out, the latter is the number of black population needed to move into zip code $`i`$.
+
+<p align="center">Bike station Thiessen-Polygon Buffer</p>
+<p align="center">
+  <img width="60%" height="60%" src="images/JobAccessibility/relocate_pop.jpg">
+</p>
+
 
 ## Methods
 - Gravity-based Accessibility Measure
