@@ -80,7 +80,7 @@ This computation results in either a positive or negative integer. The positive 
 
 _Gravity-based Accessibility Measure_
 
-The job accessibility index is adapted from gravity-based measure, and we define 30 min as the travel time threshold. Conceuptually speaking, the following formula penalizes the job accessibility based on the travel time between workers’ home and work location.
+The job accessibility index is adapted from gravity-based measure, and I define 30 min as the travel time threshold. Conceuptually speaking, the following formula penalizes the job accessibility based on the travel time between workers’ home and work location.
 
 
 $`A_{i} = \displaystyle\sum_{j}`$ $`[\frac{E_{j} \cdot f(d_{ij})}{\displaystyle\sum_{k} P_{k} \cdot f(d_{jk})}]`$
