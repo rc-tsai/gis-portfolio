@@ -1,10 +1,10 @@
 ## Table of Content
 - [Background](#Background)<br>
-- [Variables selection](#Variables-selection)<br>
-- [Methods]()<br>
-- [Data assembly]()<br>
-- [Data]()
-- [Result]()
+- [Variables selection](#Variable-selection)<br>
+- [Methods](#Method)<br>
+- [Data assembly](#Data-assembly)<br>
+- [Data](#data)
+- [Result](#Result)
 <br><br><br>
 
 ## Background
