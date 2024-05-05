@@ -121,7 +121,7 @@ The job accessibility index is formulated on a gravity-based measure, utilizing 
 
 Moreover, the time decay function can be understood as representing the ease of accessing a job. As distance from the job increases, the difficulty of reaching it escalates. This is modulated by the parameter $b$, which is a non-negative time decay coefficient.
 
-I adopt the methodology outlined by [Iacono et al. (2008)](https://hdl.handle.net/11299/151329) to estimate the travel time decay coefficient. This method entails fitting an exponential decay curve to the midpoint of each bin in the histogram. I estimate three time decay coefficients in total, corresponding to Metropolitan, Small town, and Rural areas, respectively.
+I adopt the methodology outlined by [Iacono et al. (2008)](https://hdl.handle.net/11299/151329) to estimate the travel time decay coefficient. This method entails fitting an exponential decay curve to the midpoint of each bin in the histogram. I estimate three time decay coefficients in total, corresponding to Metropolitan, Small town, and Rural areas, respectively. Learn more about the way I construct job accessibility index [here](https://github.com/rc-tsai/gis-portfolio/blob/main/Job%20accessibility%20index.ipynb).
 
 One might observe that the coefficient is influenced by the number of bins specified for the histogram. Therefore, I utilize the [Freedman–Diaconis rule](https://en.wikipedia.org/wiki/Freedman%E2%80%93Diaconis_rule) to ascertain the optimal bin width and subsequently determine the optimal number of bins. $IQR(x)$ is the interquartile of the data.
 
