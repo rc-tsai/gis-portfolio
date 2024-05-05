@@ -97,7 +97,7 @@ For this project, I use three different methods include:
 
 _Gravity-based Accessibility Measure_ <br>
 
-The job accessibility index is adapted from gravity-based measure, and I define 30 min as the travel time threshold. Conceuptually speaking, the following formula penalizes the job accessibility based on the travel time between workers’ home and work location.
+I construct a job accessibility index for lower-paying jobs within each census tract in Georgia, focusing on those earning $1250 or less per month. The model is grounded in a gravity-based framework as outlined by [Blumenberg et al. (2003)](https://escholarship.org/uc/item/0g04h3rt). However, I've opted for a distinct time decay function, which is expressed by the following formula:
 
 <br>
 <p align="center">
@@ -114,3 +114,27 @@ $`P_{k}`$ = number of jobseekers (job competitors) in census tract 𝑘
 $`f(d_{ij} = e^{-\beta(k) \cdot t}`$ (time decay funtion, $`b`$ = non-negative time decay coefficient, $`t`$ = travel time in minute, $`k`$ = area type)
 
 _Note. Area type is categorized as Metropolitan area, Small town, or Rural area based on [USDA Rural-Urban Commuting Area Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/)_
+
+<br>
+
+The job accessibility index is formulated on a gravity-based measure, utilizing a travel time threshold of 30 minutes. Conceptually, the formula imposes a penalty on job accessibility proportional to the travel time between workers' residences and job locations. Importantly, this formula integrates considerations of job competition. Higher competition for a job makes it more accessible to other job seekers, thus lowering its accessibility score. 
+
+Moreover, the time decay function can be understood as representing the ease of accessing a job. As distance from the job increases, the difficulty of reaching it escalates. This is modulated by the parameter $b$, which is a non-negative time decay coefficient.
+
+I adopt the methodology outlined by [Iacono et al. (2008)](https://hdl.handle.net/11299/151329) to estimate the travel time decay coefficient. This method entails fitting an exponential decay curve to the midpoint of each bin in the histogram. I estimate three time decay coefficients in total, corresponding to Metropolitan, Small town, and Rural areas, respectively.
+
+One might observe that the coefficient is influenced by the number of bins specified for the histogram. Therefore, I utilize the [Freedman–Diaconis rule](https://en.wikipedia.org/wiki/Freedman%E2%80%93Diaconis_rule) to ascertain the optimal bin width and subsequently determine the optimal number of bins. $IQR(x)$ is the interquartile of the data.
+
+$$
+\text{Bin width} = 2 \frac{IQR(x)}{\sqrt[3]{n}}
+$$
+
+<br>
+
+I estiamte travel time from 2,000 OD trip records in LEHD LODES for each of three area types, respectively. Following are the 
+
+<div style="display:flex;">
+    <img src="../images/JobAccessibility/Metropolitan.png" style="width:33%;">
+    <img src="../images/JobAccessibility/Smalltown.png" style="width:33%;">
+    <img src="../images/JobAccessibility/Rural.png" style="width:33%;">
+</div>
