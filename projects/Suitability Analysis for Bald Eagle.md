@@ -1,6 +1,6 @@
 ## Contents
 - [Research objective](#Research-objective)<br>
-- [Data used](#Data-used)<br>
+- [Data](#Data)<br>
 - [Result](#Result)<br>
 <br><br><br><br>
 
@@ -20,7 +20,7 @@ This project attempts to identify bald eagles’ habitat in Georgia by looking f
 <br>
 <br>
 
-## Data used
+## Data
 
 | **Data Layer**                     | **Data Type**    | **Resolution** | **Source**                                                                                     | **Description**                                                                         | **Date**               |
 |--------------------------------------------|--------------------------|-----------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------|
