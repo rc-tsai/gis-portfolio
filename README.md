@@ -16,3 +16,10 @@ Spatial Analysis
 Visualization, Planning Report Design
 - [Visualization-Adobe Illustrator, ArcGIS Pro](https://github.com/rc-tsai/gis-portfolio/blob/main/Visualization-Adobe%20Illustrator%2C%20ArcGIS%20Pro)
 - [Midtown Community Center Report](https://issuu.com/rc-t/docs/report_midtowncommunitycenter)
+
+<br>
+
+Command Files in R and Jupyter Notebook
+- [Job accessibility index](https://github.com/rc-tsai/gis-portfolio/blob/main/Job%20accessibility%20index.ipynb)
+- [Socioeconomic GIS](https://rpubs.com/rct/socioeconomicgis)
+- [zip code to zcta crosswalk](https://github.com/rc-tsai/gis-portfolio/blob/main/zip%20code%20to%20zcta%20crosswalk.py)
