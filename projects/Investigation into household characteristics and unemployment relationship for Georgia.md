@@ -131,10 +131,17 @@ $$
 
 <br>
 
-I estiamte travel time from 2,000 OD trip records in LEHD LODES for each of three area types, respectively. Following are the 
+I estiamte travel time from 2,000 OD trip records in LEHD LODES for each of three area types, respectively. Following are the travel time decay coefficients for the corresponding area types.
 
-<div style="display:flex;">
+<p align="center">
     <img src="../images/JobAccessibility/Metropolitan.png" style="width:33%;">
     <img src="../images/JobAccessibility/Smalltown.png" style="width:33%;">
     <img src="../images/JobAccessibility/Rural.png" style="width:33%;">
-</div>
+</p>
+<br><br>
+
+Following is the job accessibility index for Georgia at census tract level.
+
+<p align="center">
+    <img src="../images/JobAccessibility/AI.jpg" style="width:60%;">
+</p>
