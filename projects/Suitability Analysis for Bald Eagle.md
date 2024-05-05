@@ -55,7 +55,7 @@ _Rating schedule_
 <p align="center"> Preliminary result of suitable habitat for Bald Eagle</p>
 
 <p align="center">
-  <img width="60%" height="60%" src="images/SuitableHabitat.jpg">
+  <img width="60%" height="60%" src="../images/SuitableHabitat.jpg">
 </p>
 
 
@@ -65,7 +65,7 @@ _Rating schedule_
 Following is the final result showing the optimal habitats for bald eagles in Georgia. I found that most of the optimal habitats are quite fragmented.
 
 <p align="center">
-  <img width="60%" height="60%" src="images/Overview.jpg">
+  <img width="60%" height="60%" src="../images/Overview.jpg">
 </p>
 
 <br>
@@ -76,11 +76,11 @@ It is very difficult to see each optimal habitat in the above map. The following
 
 |Suitable habitat in East Georgia|Suitable habitat in Southeast Georgia|
 |:-:|:-:|
-|![First Image](images/Liberty.jpg)|![Second Image](images/Ware.jpg)|
+|![First Image](../images/Liberty.jpg)|![Second Image](../images/Ware.jpg)|
 
 |Suitable habitat in Southwest Georgia|Suitable habitat in Northeast Georgia|
 |:-:|:-:|
-|![First Image](images/Calhoun.jpg)|![Second Image](images/Rabun.jpg)|
+|![First Image](../images/Calhoun.jpg)|![Second Image](../images/Rabun.jpg)|
 
 <br>
 To better identify forest areas that are qualified for tree canopy cover requirements. I clipped tree canopy cover raster (Georgia) by using qualified forest areas (polygon) that are 0.5 miles away from the highway, within 1 mile of water body, are pine or cypress trees type, and have low risk of lead poisoning. I then converted the clipped raster into a polygon. Next, I used spatial join to join clipped raster to forest areas if cells are completely contained by forest areas and used field mapping to get the mean of tree canopy cover for each forest area. Note that each cell size is the same, so the average tree canopy cover percentage won’t be biased. The following criteria are used for creating intermediate and final maps.
@@ -105,11 +105,11 @@ Although tree shape, size, and location are relatively more important than the t
 <br>
 
 _Lead poisoning_\
-Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following images show the Pb level in Georgia.
+Bald eagles have been found to be suffering from the consequences of lead poisoning (National Park Service; USGS, 2022). Half of the US bald eagle population suffered from the poisoning (Ali, 2022). In addition, bald eagles can be exposed to lead poisoning directly and indirectly by ingesting spent lead ammunition or preying on another animal that has been shot with ammunition or has ingested lead (Haig et al., 2014; Kolb, 2018). To identify a relatively clean and safe environment, I interpolated lead poisoning (Pb by ppm) in Georgia and then reclassified it for comparison. Following ../images show the Pb level in Georgia.
 
 |Lead(Pb) by ppm|Lead(Pb) by risk|
 |:-:|:-:|
-|![First Image](images/Pbppm.jpg)|![Second Image](images/PbRisk.jpg)|
+|![First Image](../images/Pbppm.jpg)|![Second Image](../images/PbRisk.jpg)|
 
 <br>
 
@@ -118,10 +118,10 @@ I clip the tree canopy cover raster by using the Georgia state boundary as a cli
 
 |Tree Canopy Cover percentage (0 to 100%)|Reclassify Tree Canopy Cover percentage (0 to 100%)|
 |:-:|:-:|
-|![Tree Canopy Cover](images/TreeCanopyCover.jpg)|![Reclassify Tree Canopy Cover](images/PerTCC.jpg)|
+|![Tree Canopy Cover](../images/TreeCanopyCover.jpg)|![Reclassify Tree Canopy Cover](../images/PerTCC.jpg)|
 
 
 <br>
 
 _Workflow_\
-<img src="images/workflow.png" width="100%" height="100%">
+<img src="../images/workflow.png" width="100%" height="100%">
