@@ -1,0 +1,440 @@
+---
+title: "Final project"
+author: "Rueichen Tsai"
+date: "2024-04-14"
+output: html_document
+---
+
+```{r}
+# set up & load libraries
+
+setwd("D:/CP6570 Socioeconomic GIS/FinalProject")
+library(tidycensus)
+library(tidyverse)
+library(dplyr)
+library(car)
+library(corrplot)
+library(lm.beta)
+census_api_key("8ac405c52332f971cc271b50bd110526d24f89c7", install = TRUE, overwrite=TRUE)
+
+dflow <- read.csv("Lowpayjob.csv")
+dflow$GEOID <- dflow$CT_GEOID
+```
+
+## Civilian labor force population 25 to 64 years: Male
+
+```{r}
+# Read the CSV file
+lf <- read.csv("Sex by Age by Employment Status for the Population 16 Years and Over/ACSDT5Y2021.B23001-Data.csv")
+
+# Select the columns of interest
+male <- lf[, c(
+  "GEO_ID",
+  "B23001_006E", "B23001_007E", # 16 to 19 (Total civilian labor force, employed)
+  "B23001_013E", "B23001_014E", # 20 to 21 (Total civilian labor force, employed)
+  "B23001_020E", "B23001_021E", # 22 to 24 (Total civilian labor force, employed)
+  "B23001_027E", "B23001_028E", # 25 to 29 (Total civilian labor force, employed)
+  "B23001_034E", "B23001_035E", # 30 to 34 (Total civilian labor force, employed)
+  "B23001_041E", "B23001_042E", # 35 to 44 (Total civilian labor force, employed)
+  "B23001_048E", "B23001_049E", # 45 to 54 (Total civilian labor force, employed)
+  "B23001_055E", "B23001_056E", # 55 to 59 (Total civilian labor force, employed)
+  "B23001_062E", "B23001_063E", # 60 to 61 (Total civilian labor force, employed)
+  "B23001_069E", "B23001_070E"  # 62 to 64 (Total civilian labor force, employed)
+)]
+
+# Remove the first row
+male <- male[-1, ]
+
+# Rename columns
+colnames(male) <- c(
+  "GEOID",
+  "g1", "g1.1", # 16 to 19
+  "g2", "g2.1", # 20 to 21
+  "g3", "g3.1", # 22 to 24
+  "g4", "g4.1", # 25 to 29
+  "g5", "g5.1", # 30 to 34
+  "g6", "g6.1", # 35 to 44
+  "g7", "g7.1", # 45 to 54
+  "g8", "g8.1", # 55 to 59
+  "g9", "g9.1", # 60 to 61
+  "g10", "g10.1" # 62 to 64
+)
+
+# Convert columns to numeric
+male[, -1] <- sapply(male[, -1], as.numeric)
+
+
+# Get the total labor force (includes employed and unemployed) and employed labor force
+male$pop_16.64 <- male$g1 + male$g2 + male$g3 + male$g4 + male$g5 + male$g6 + male$g7 + male$g8 + male$g9 + male$g10
+male$E_16.64 <- male$g1.1 + male$g2.1 + male$g3.1 + male$g4.1 + male$g5.1 + male$g6.1 + male$g7.1 + male$g8.1 + male$g9.1 + male$g10.1
+
+
+male <- select(male, GEOID, pop_16.64, E_16.64)
+male <- male %>% 
+  rename(MaleLaborForce=pop_16.64, MaleEmployed=E_16.64)
+```
+
+## Civilian labor force population 25 to 64 years: Female
+
+```{r}
+# Female civilian labor force 16 to 64
+
+female <- lf[, c(
+  "GEO_ID",
+  "B23001_092E", "B23001_093E", # 16 to 19
+  "B23001_099E", "B23001_100E", # 20 to 21
+  "B23001_106E", "B23001_107E", # 22 to 24
+  "B23001_113E", "B23001_114E", # 25 to 29
+  "B23001_120E", "B23001_121E", # 30 to 34
+  "B23001_127E", "B23001_128E", # 35 to 44
+  "B23001_134E", "B23001_135E", # 45 to 54
+  "B23001_141E", "B23001_142E", # 55 to 59
+  "B23001_148E", "B23001_149E", # 60 to 61
+  "B23001_155E", "B23001_156E"  # 62 to 64
+)]
+
+female <- female[-1, ]
+
+
+female <- female %>%
+  rename(
+    GEOID = GEO_ID,
+    g1 = B23001_113E,  # civilian labor force 25 to 29
+    g1.1 = B23001_114E,  # employed 25 to 29
+    g2 = B23001_120E,  # civilian labor force 30 to 34
+    g2.1 = B23001_121E,  # employed 30 to 34
+    g3 = B23001_127E,  # civilian labor force 35 to 44
+    g3.1 = B23001_128E,  # employed 35 to 44
+    g4 = B23001_134E,  # civilian labor force 45 to 54
+    g4.1 = B23001_135E,  # employed 45 to 54
+    g5 = B23001_141E,  # civilian labor force 55 to 59
+    g5.1 = B23001_142E,  # employed 55 to 59
+    g6 = B23001_148E,  # civilian labor force 60 to 61
+    g6.1 = B23001_149E,  # employed 60 to 61
+    g7 = B23001_155E,  # civilian labor force 62 to 64
+    g7.1 = B23001_156E,  # employed 62 to 64
+    g8 = B23001_092E,  # civilian labor force 16 to 19
+    g8.1 = B23001_093E, # employed 16 to 19
+    g9 = B23001_099E,  # civilian labor force 20 to 21
+    g9.1 = B23001_100E, # employed 20 to 21
+    g10 = B23001_106E, # civilian labor force 22 to 24
+    g10.1 = B23001_107E, # employed 22 to 24
+  )
+
+female[, c("g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10",
+       "g1.1", "g2.1", "g3.1", "g4.1", "g5.1", "g6.1", "g7.1", "g8.1", "g9.1", "g10.1")] <- 
+  lapply(female[, c("g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10",
+                "g1.1", "g2.1", "g3.1", "g4.1", "g5.1", "g6.1", "g7.1", "g8.1", "g9.1", "g10.1")], as.numeric)
+
+# Get the total female labor force (include employed and unemployed) and employed labor force
+female$pop_16.64 <- female$g1 + female$g2 + female$g3 + female$g4 + female$g5 + female$g6 + female$g7 +
+  female$g8 + female$g9 + female$g10
+female$E_16.64 <- female$g1.1 + female$g2.1 + female$g3.1 + female$g4.1 + female$g5.1 + female$g6.1 + female$g7.1 + female$g8.1 + female$g9.1 + female$g10.1
+
+
+female <- select(female, GEOID, pop_16.64, E_16.64)
+female <- female %>% 
+  rename(FemaleLaborForce=pop_16.64, FemaleEmployed=E_16.64)
+```
+
+
+```{r}
+# Get the total labor force
+All <- merge(male, female, by = "GEOID", all = FALSE)
+All$AllLaborForce <- All$MaleLaborForce + All$FemaleLaborForce
+All$AllEmployed <- All$MaleEmployed + All$FemaleEmployed
+
+All$UERate <- 1 - (All$AllEmployed / All$AllLaborForce)
+clean.df <- select(All, GEOID, MaleLaborForce, FemaleLaborForce)
+clean.df$GEOID <- substring(clean.df$GEOID, 10)
+write.csv(clean.df, "gender.csv")
+clean.df$GEOID <- substring(clean.df$GEOID, 10)
+```
+
+## Percent of households without a motor vehicle
+
+```{r}
+tot.hs <- get_acs(geography = "tract",
+                  state = "GA",
+                  year = 2021,
+                  survey = "acs5",
+                  variables = c(novehiclehs.ps = "DP04_0057E"))
+tot.hs$moe <- NULL
+tot.hs$variable <- NULL
+tot.hs$NAME <- NULL
+
+novehicle <- get_acs(geography = "tract",
+                     state = "GA",
+                     year = 2021,
+                     survey = "acs5",
+                     variables = c(novehiclehs.ps = "DP04_0058"))
+novehicle$moe <- NULL
+novehicle$variable <- NULL
+novehicle$NAME <- NULL
+
+tot.hs$estimate <- novehicle$estimate / tot.hs$estimate
+
+tot.hs <- tot.hs %>%
+  rename(NoCar=estimate)
+
+```
+## Merge vehicle ownership
+```{r}
+clean.df1 <- merge(clean.df, tot.hs, by = "GEOID", all = FALSE)
+
+```
+
+## Tract to Tract Accessibility Index (Low paying job)
+
+```{r}
+# Read the CSV file on low paying job access index
+ac <- read.csv("Tract_to_Tract_Low_Job_Acc.csv")
+ac <- select(ac, TractID, SUM_Ej_dot_dij)
+ac <- ac %>% 
+  rename(c(GEOID=TractID, AC=SUM_Ej_dot_dij))
+```
+
+
+## Regression model
+```{r}
+# Read the CSV file, clean up
+df <- read.csv("CensusTract_Regression.csv")
+UERate <- read.csv("UERate.csv")
+pubinc <- read.csv("pubinc.csv")
+edu <- read.csv("EduAttain.csv")
+mg <- read.csv("ownermortgage.csv")
+est <- read.csv("ct_est.csv")
+enpro <- read.csv("EnglishProficiency.csv")
+NoInt <- read.csv("NoInt.csv")
+UElabor_dis <- read.csv("UElabor_Disability.csv")
+
+UERate$GEOID <- substring(UERate$GEOID, 10)
+UERate$UERate <- as.numeric(UERate$UERate)
+pubinc$GEOID <- substring(pubinc$GEOID, 10)
+edu$GEOID <- substring(edu$GEOID, 10)
+mg$GEOID <- substring(mg$GEOID, 10)
+enpro$GEOID <- substring(enpro$GEOID, 10)
+df$UERate <- NULL
+est <- select(est, GEOID, zcta_est)
+df$Norm_AC <- (df$AC - min(df$AC, na.rm=TRUE)) / (max(df$AC, na.rm = TRUE) - min(df$AC, na.rm = TRUE))
+NoInt$GEOID <- substring(NoInt$GEOID, 10)
+NoInt$NoInt <- as.numeric(NoInt$NoInt)
+UElabor_dis$GEOID <- substring(UElabor_dis$GEOID, 10)
+UElabor_dis$UED_pct <- UElabor_dis$UE_D / UElabor_dis$TotUE
+enpro$enlim <-  ((enpro$spanish + enpro$european + enpro$pacific + enpro$other) / enpro$tot) * 100
+pubinc$PubincPct <- (pubinc$pubinc / pubinc$tot) * 100
+
+
+UERate$X <- NULL
+UERate$X.1 <- NULL
+
+
+# Population with a high school diploma or more
+edu$HSDup.pct <- (edu$HSD + edu$SC + edu$B) / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+edu$HSD.pct <- edu$HSD / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+edu$HSDL.pct <- (edu$HSD + edu$LHSD) / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+edu$LHSD.pct <- edu$LHSD / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+edu$B.pct <- (edu$B / (edu$LHSD + edu$HSD + edu$SC + edu$B)) * 100
+edu$BLess.pct <- (edu$HSD + edu$LHSD + edu$SC) / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+edu$SCup.pct <- (edu$B + edu$SC) / (edu$LHSD + edu$HSD + edu$SC + edu$B)
+
+# Percent owner-occupied housing units with a mortgage 
+mg$mgpct <- (mg$ownerwmort / mg$totowner) * 100
+
+# Percent household without a vehicle
+df$NoCar <- df$NoCar * 100
+
+# Merge data (educational attainment, public assistance income, unemployment rate, mortgage)
+df <- merge(df, edu, by = "GEOID")
+df <- merge(df, pubinc, by = "GEOID")
+df <- merge(df, UERate, by = "GEOID")
+df <- merge(df, mg, by = "GEOID")
+df <- merge(df, est, by = "GEOID")
+df <- merge(df, enpro, by = "GEOID")
+df <- merge(df, NoInt, by = "GEOID")
+df <- merge(df, UElabor_dis, by = "GEOID")
+
+# Construct variables for adjusted dissimilarity index
+df$AllJob <- df$LowInc_job + df$MedInc_job + df$HighInc_job
+
+
+# Construct adjusted dissimilarity index (unit is in percent)
+df$AllJobDI <- ((abs((df$UE / sum(df$UE, na.rm = TRUE)) - (df$AllJob / sum(df$AllJob, na.rm = TRUE)))) / 2) * 100
+
+# Add dissimilarity variables by different wage levels
+df$LowIncJob_DI <- abs((df$UE / sum(df$UE, na.rm = TRUE)) - (df$LowInc_job / sum(df$LowInc_job, na.rm = TRUE))) / 2 * 100
+df$LowInc_relocate <- df$LowIncJob_DI / 100 * sum(df$UE, na.rm = TRUE)
+
+df$MedIncJob_DI <- abs((df$UE / sum(df$UE, na.rm = TRUE)) - (df$MedInc_job / sum(df$MedInc_job, na.rm = TRUE))) / 2 * 100
+df$MedInc_relocate <- df$MedIncJob_DI / 100 * sum(df$UE, na.rm = TRUE)
+
+df$HighIncJob_DI <- abs((df$UE / sum(df$UE, na.rm = TRUE)) - (df$HighInc_job / sum(df$HighInc_job, na.rm = TRUE))) / 2 * 100
+df$HighInc_relocate <- df$HighIncJob_DI / 100 * sum(df$UE, na.rm = TRUE)
+
+
+# Add Job-Worker ratio variables by different wage levels
+df$lowratio <- df$LowInc_job/df$LowInc_worker
+df$medratio <- df$MedInc_job/df$MedInc_worker
+df$highratio <- df$HighInc_job/df$HighInc_worker
+
+
+
+# Build model
+df1.model <- lm(UERate ~
+                 B.pct #Percent population with a High school diploma or more
+                + mgpct
+                + zcta_est
+                #+ RUCA # Metropolitan/Small town/Rural area
+                + I(NoCar*100) # Auto mismatch
+                + PubincPct # Work disincentive
+                + AC # Access to low paying jobs
+                #+ LHSD
+                #+ Norm_LowJob
+                #+ HighIncJob_DI
+                #+ MedIncJob_DI
+                + LowIncJob_DI
+                #+ highratio
+                + lowratio
+                #+ Area_Type
+                #+ HighInc_relocate
+                #+ MedInc_relocate
+                #+ LowInc_relocate
+                #+ MedInc_relocate
+                #+ HighInc_relocate
+                #+ Area_Dissimilarity
+                #+ Norm_LowJob
+                , data = df)
+summary(df1.model)
+
+lm.beta(df1.model)
+vif(df1.model)
+
+df1 <- na.omit(df)
+
+# Build null and full model
+null.model <- lm(UERate ~ 1, data = df1)
+full.model <- lm(UERate ~ LowInc_job + MedInc_job + HighInc_job + Area_Type + LowIncJob_DI
+                 + MedIncJob_DI + HighIncJob_DI + lowratio + medratio + highratio +
+                   AllJobDI + LHSD + HSD + SC + B + NoCar + AC + RUCA + JobSprawl + HSDup.pct
+                 + HSD.pct + LHSD.pct + enlim + NoInt + UED_pct
+                 + PubincPct + LowInc_relocate + MedInc_relocate + HighInc_relocate + mgpct
+                 , data = df1)
+
+# Run stepwise model
+step.model <- step(null.model,
+                  scope = formula(full.model),
+                  direction = "both",
+                  trace = 0)
+summary(step.model)
+
+
+
+
+```
+```{r}
+
+df1.model <- lm(UERate ~
+                B.pct
+                + mgpct
+                #+ RUCA # Metropolitan/Small town/Rural area
+                + NoCar # Auto mismatch
+                + PubincPct # Work disincentive
+                + Norm_AC # Access to low paying jobs
+                #+ LHSD.pct
+                #+ HighIncJob_DI
+                #+ MedIncJob_DI
+                #+ LowIncJob_DI
+                #+ MedInc_job
+                #+ LowInc_job
+                #+ AllJobDI
+                + LowIncJob_DI
+                #+ highratio
+                + lowratio
+                #+ medratio
+                + zcta_est
+                #+ Norm_AC 
+                #+ Job_Sprawl
+                #+ Area_Type
+                #+ HighInc_relocate
+                #+ MedInc_relocate
+                #+ LowInc_relocate
+                #+ MedInc_relocate
+                #+ HighInc_relocate
+                #+ Area_Dissimilarity
+                #+ Norm_LowJob
+                , data = reg)
+#vif(df1.model)
+summary(df1.model)
+
+
+
+reg <- select(df, GEOID, UERate, B.pct, mgpct, NoCar, PubincPct, Norm_AC, LowIncJob_DI, lowratio, zcta_est)
+reg <- reg %>% 
+  rename(c(BAPct=B.pct, MortgPct=mgpct, AI=Norm_AC, NoCarPct=NoCar,LPJD = LowIncJob_DI, LPJR=lowratio,
+           BEzcta=zcta_est))
+#view(reg)
+write.csv(reg, "reg_test.csv")
+```
+
+```{r}
+uer <- read.csv("UERate.csv")
+uer$X <- NULL
+uer$X.1 <- NULL
+uer$nUERate <- uer$UE/uer$Totlabor * 100
+
+uer$GEOID <- substring(uer$GEOID, 10)
+df <- merge(uer, df, by = "GEOID")
+
+df2.model <- lm(UERate ~
+                B
+                + mgpct
+                + NoCar
+                + PubincPct
+                + Norm_AC
+                + LowIncJob_DI
+                + lowratio
+                + zcta_est
+                #+ AllJobDI
+                , data = df)
+summary(df2.model)
+
+
+## replace NA with median
+if ((sum(is.na(UERate)) / nrow(df)) <= 0.1) {
+  a <- UERate %>% drop_na(df)
+  df[is.na(df)] <- median(a$UERate)
+}
+
+testdf <- select(df, GEOID, UERate, B.pct, mgpct, NoCar, PubincPct, Norm_AC, LowIncJob_DI, lowratio, zcta_est)
+
+testdf <- testdf %>% 
+  rename(BAPct=B.pct, MortgPct=mgpct, NoCarPct = NoCar, AI=Norm_AC, LowjobDI=LowIncJob_DI, BEzcta=zcta_est, LowjobRatio=lowratio)
+
+testmodel <- lm(UERate ~ BAPct + MortgPct + NoCarPct + PubincPct + AI +
+                  LowjobDI + LowjobRatio + BEzcta, data = testdf)
+summary(testmodel)
+write.csv(testdf, "testdfv1.csv")
+
+df <- read.csv("testdfv1.csv")
+
+```
+
+
+## Personal note
+```{r}
+#DP04_0046E	Estimate!!HOUSING TENURE!!Occupied housing units!!Owner-occupied
+#S2506_C01_001E	Estimate!!Owner-occupied housing units with a mortgage!!Owner-occupied housing units with a mortgage
+
+# business establishment zipcode to zcta crosswalk in Python
+import pandas as pd
+est = pd.read_csv("D:\CP6570 Socioeconomic GIS\FinalProject\BusinessEstablishment.csv")
+df = pd.read_csv("D:\M.S. GIS\Georgia Tech\GRA\CQGRD\Job_Accessibility\TANF\ZIPCodetoZCTACrosswalk2022UDS.csv")
+df = df[df['STATE'] == 'GA']
+con = pd.merge(est, df, how='inner', left_on='zip', right_on='ZIP_CODE')
+con['zcta'] = con['zcta'].astype(float).astype(int).astype(str); con
+con['zcta_est'] = con.groupby('zcta')['est'].transform('sum'); con
+con = con.drop_duplicates(subset='zcta'); con
+zcta_est = con[['zcta','zcta_est']]; zcta_est
+zcta_est.to_csv('zcta_est.csv')
+```
+
