@@ -20,6 +20,6 @@ Visualization, Planning Report Design
 <br>
 
 Command Files in R and Jupyter Notebook
-- [Job accessibility index](https://github.com/rc-tsai/gis-portfolio/blob/main/Job%20accessibility%20index.ipynb)
+- [Gravity-based job accessibility index](https://github.com/rc-tsai/gis-portfolio/blob/main/Job%20accessibility%20index.ipynb)
 - [Socioeconomic GIS](https://rpubs.com/rct/socioeconomicgis)
 - [zip code to zcta crosswalk](https://github.com/rc-tsai/gis-portfolio/blob/main/zip%20code%20to%20zcta%20crosswalk.py)
