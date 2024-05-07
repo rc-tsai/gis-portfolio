@@ -5,9 +5,9 @@ This is Rueichen's portfolio showcasing some GIS analyses he has completed. Plea
 <br>
 
 Spatial Analysis
-- [Suitability Analysis for Bald Eagle](https://github.com/rc-tsai/gis-portfolio/blob/main/projects/Suitability%20Analysis%20for%20Bald%20Eagle.md)
-- [Los Angeles Metro bike sharing demand analysis](https://github.com/rc-tsai/gis-portfolio/blob/main/projects/Los%20Angeles%20Metro%20bike%20sharing%20demand%20analysis.md)
-- [Investigation into household characteristics and unemployment relationship for Georgia](https://github.com/rc-tsai/gis-portfolio/blob/main/projects/Investigation%20into%20household%20characteristics%20and%20unemployment%20relationship%20for%20Georgia.md) (currently uploading)
+- [Suitability Analysis for Bald Eagle](./projects/Suitability%20Analysis%20for%20Bald%20Eagle.md)
+- [Los Angeles Metro bike sharing demand analysis](./projects/Los%20Angeles%20Metro%20bike%20sharing%20demand%20analysis.md)
+- [Investigation into household characteristics and unemployment relationship for Georgia](./projects/Investigation%20into%20household%20characteristics%20and%20unemployment%20relationship%20for%20Georgia.md) (currently uploading)
 - [Assessing racial disparities in TANF recipients’ job access and its implications for health-related outcomes](https://issuu.com/rc-t/docs/xula_poster_v3)
 - [Land Cover Change Detection in Tift County, Georgia](https://issuu.com/rc-t/docs/class_project_report_rueichen_tsai)
 
@@ -20,6 +20,6 @@ Visualization, Planning Report Design
 <br>
 
 Command Files in R and Jupyter Notebook
-- [Gravity-based job accessibility index](https://github.com/rc-tsai/gis-portfolio/blob/main/Job%20accessibility%20index.ipynb)
+- [Gravity-based job accessibility index](./miscellaneous/Gravity-based%20job%20accessibility%20index.ipynb)
 - [Socioeconomic GIS](https://rpubs.com/rct/socioeconomicgis)
-- [zip code to zcta crosswalk](https://github.com/rc-tsai/gis-portfolio/blob/main/zip%20code%20to%20zcta%20crosswalk.py)
+- [zip code to zcta crosswalk](./miscellaneous/zip%code%to%zcta%crosswalk.py)
