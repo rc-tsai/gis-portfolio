@@ -1,5 +1,5 @@
 ## Contents
-- [Euclidean and Network distance Thiessen Buffer](#Thiessen-buffer)
+- [Euclidean and Network distance Thiessen Buffer](#Euclidean-and-Network-distance-Thiessen-Buffer)
 - [Travel Time Exponential decay coefficient](#Travel-Time-Exponential-decay-coefficient)
 
 <br><br>
