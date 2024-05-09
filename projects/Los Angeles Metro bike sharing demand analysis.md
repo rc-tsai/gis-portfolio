@@ -182,7 +182,7 @@ Given that this project uses LA Metro Bike share 2023-q3 (July-September) data o
 <br><br>
 
 ## ArcGIS ModelBuilder_constructing Thiessen Polygon buffer from network distance
-### The basic idea is:
+### The general idea is:
 First, construct buffer from points <br>
 Second, create Thiessen polygon from points <br>
 Third, extract Thiessen polygon line by using _Polygon to Line_ tool <br>
