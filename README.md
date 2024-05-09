@@ -20,6 +20,6 @@ Visualization, Planning Report Design
 <br>
 
 Command Files in R and Jupyter Notebook
-- [Gravity-based job accessibility index](./miscellaneous/Gravity-based%20job%20accessibility%20index.ipynb)
+- [Time decay coefficient for gravity-based job accessibility index](./miscellaneous/Time%20decay%20coefficient%20for%20gravity-based%20job%20accessibility%20index.ipynb)
 - [Socioeconomic GIS](https://rpubs.com/rct/socioeconomicgis)
 - [zip code to zcta crosswalk](./miscellaneous/zip%code%to%zcta%crosswalk.py)
