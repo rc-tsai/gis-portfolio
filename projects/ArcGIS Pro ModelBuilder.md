@@ -17,8 +17,17 @@ The following workflow delineates the steps involved in creating a Network Dista
 <div style="text-align: center;">
   <strong>ArcGIS ModelBuilder Workflow</strong>
   <br>
+<div style="text-align: center;">
   <img src="../images/LA Metro/Model.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
 </div>
+<br>
+  
+- First, construct buffer from points <br>
+- Second, create Thiessen polygon from points <br>
+- Third, extract Thiessen polygon line by using Polygon to Line tool <br>
+- Fourth, use Intersect tool for the results from the first and third steps <br>
+- Fifth, extract buffer boundary by usingi Polygon to Line again on the buffer, then dissolve! <br>
+- Sixth, use Feature to Polygon on the results from Fourth and Fifth steps. <br>
 
 <br><br>
 
