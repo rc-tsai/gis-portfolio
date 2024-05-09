@@ -1,5 +1,6 @@
 ## Contents
 - [Euclidean and Network distance Thiessen Buffer](#Thiessen-buffer)
+- [Travel Time Exponential decay coefficient](#Travel-Time-Exponential-decay-coefficient)
 
 <br><br>
 
@@ -19,3 +20,8 @@ The following workflow delineates the steps involved in creating a Network Dista
   <img src="../images/LA Metro/Model.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
 </div>
 
+<br><br>
+
+### Travel Time Exponential decay coefficient
+
+[dd](../miscellaneous/Time%20decay%20coefficient%20for%20gravity-based%20job%20accessibility%20index.ipynb)
