@@ -6,8 +6,10 @@ In the majority of analyses concerning bike share demand, researchers employ a E
 |![First Image](../images/ArcGIS%20Pro%20ModelBuilder/EuclideanBuffer_300m.png)|![Second Image](../images/ArcGIS%20Pro%20ModelBuilder/NetworkBuffer_300m.png)|
 
 <br><br>
-The following workflow illustrates the steps used for creating Network Distance Theissen Buffer
-<p align="center">ArcGIS ModelBuilder workflow</p>
-<p align="center">
-  <img width="100%" height="100%" src="../images/LA Metro/Model.png">
-</p>
+The following workflow delineates the steps involved in creating a Network Distance Thiessen Buffer.
+<div style="text-align: center;">
+  <strong>ArcGIS ModelBuilder Workflow</strong>
+  <br>
+  <img src="../images/LA Metro/Model.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
+</div>
+
