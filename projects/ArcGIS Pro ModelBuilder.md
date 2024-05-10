@@ -14,7 +14,7 @@ In the majority of analyses concerning bike share demand, researchers employ a E
 
 <br><br>
 
-Below is a demonstration of creating a Network Distance Thiessen Buffer using 300-meter buffer as an example
+Below is a demonstration of creating a Network Distance Thiessen Buffer using 300-meter buffer as an example. I first creat this in ModelBuilder and then convert it into a tool in ArcGIS Pro.
 
 https://github.com/rc-tsai/gis-portfolio/assets/139235338/81fc279a-0cfa-41cf-81b0-c083649acfcb
 
@@ -24,7 +24,7 @@ https://github.com/rc-tsai/gis-portfolio/assets/139235338/81fc279a-0cfa-41cf-81b
 
 The following workflow delineates the steps involved in creating a Network Distance Thiessen Buffer.
 <div style="text-align: center;">
-  <strong>ArcGIS ModelBuilder Workflow</strong>
+  <strong>Network Distance Thiessen Buffer ModelBuilder Workflow</strong>
   <br>
 <div style="text-align: center;">
   <img src="../images/LA Metro/Model.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
