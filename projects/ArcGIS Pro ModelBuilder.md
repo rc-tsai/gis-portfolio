@@ -24,7 +24,7 @@ https://github.com/rc-tsai/gis-portfolio/assets/139235338/81fc279a-0cfa-41cf-81b
 
 The following workflow delineates the steps involved in creating a Network Distance Thiessen Buffer.
 <div style="text-align: center;">
-  <strong>Network Distance Thiessen Buffer ModelBuilder Workflow</strong>
+  <strong>Network Distance Thiessen Buffer Workflow</strong>
   <br>
 <div style="text-align: center;">
   <img src="../images/LA Metro/Model.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
