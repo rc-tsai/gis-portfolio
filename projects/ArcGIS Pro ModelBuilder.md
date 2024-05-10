@@ -31,6 +31,8 @@ The following workflow delineates the steps involved in creating a Network Dista
 
 <br><br>
 
-### Travel Time Exponential decay coefficient
+### Gravity-based job accessibility index
 
-[dd](../miscellaneous/Time%20decay%20coefficient%20for%20gravity-based%20job%20accessibility%20index.ipynb)
+First, I aggregate total number of low-paying jobs and workers (less than $1,250/month) at census tract, respectively. The trick is that [LEHD LODES]([https://lehd.ces.census.gov/](https://lehd.ces.census.gov/data/)) is linked employer-household data. Aggregating low-paying Origin-Destination (OD) trips at Residence Census Block Code is equivalent to obtaining the number of low-paying workers at census block. The same applies to aggregating low-paying OD trips at Work Census Block Code, which is tantamount to obtaining the number of jobs at census block. However, I aggregate them at census tract for calculating job accessibility index (steps can be found [here](../miscellaneous/low_paying_worker_job.ipynb)), as it is the most commonly used geographic unit found in existing literature.
+
+Secondly, I export them as csv files then bring them into ArcGIS Pro. I use export table tool on them before joining them into census tract.
