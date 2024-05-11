@@ -47,6 +47,18 @@ The following workflow delineates the steps involved in creating a Network Dista
 ## Gravity-based job accessibility index
 
 <br>
+
+This video demonstrates the steps involved in constructing a job accessibility index for lower-paying jobs using ArcGIS Pro ModelBuilder. I have developed five tools for constructing job accessibility that allow users to input their data after pre-processing it by following the [steps outlined below](#Pre-processing-data).
+
+<br>
+
+[![alt text](../images/thumbnail.jpg)](https://www.youtube.com/watch?v=rrXHwuJhhfw)
+
+<br>
+
+The following are the steps for preparing data to build a job accessibility index. First, let's review the gravity-based job accessibility index as follows:
+
+<br>
 <p align="center">
   $A_{i} = \displaystyle\sum_{j} [\frac{E_{j} \cdot f(d_{ij})}{\displaystyle\sum_{k} P_{k} \cdot f(d_{jk})}]$
 </p>
@@ -64,7 +76,9 @@ _Note. Area type is categorized as Metropolitan area, Small town, or Rural area 
 
 <br>
 
-### _Pre-processing data_
+## _Pre-processing data_
+
+### _Obtaining jobs and workers at the census tract level_
 First, I aggregate total number of low-paying jobs and workers (less than $1,250/month) at census tract, respectively. The trick is that [LEHD LODES]([https://lehd.ces.census.gov/](https://lehd.ces.census.gov/data/)) is linked employer-household data. Aggregating low-paying Origin-Destination (OD) trips at Residence Census Block Code is equivalent to obtaining the number of low-paying workers at census block. The same applies to aggregating low-paying OD trips at Work Census Block Code, which is tantamount to obtaining the number of jobs at census block. However, I aggregate them at census tract for calculating job accessibility index (steps can be found [here](../miscellaneous/low_paying_worker_job.ipynb)), as it is the most commonly used geographic unit found in existing literature.
 
 Secondly, I export them as csv files then bring them into ArcGIS Pro. I use export table tool on them before joining them into census tract. I generate census tract centroid, then add two fields 'low_job' and 'low_worker' both as DOUBLE data type. Then calculate 'low_job' after the first join, then remove join. Do it the same for 'low_worker.'
@@ -144,4 +158,12 @@ Worker_Beta = str(int(!low_worker!)) + "-" +str(!TimeDecay_Beta!)
 
 Next, we filter out census tracts that don't have low-paying jobs.
 
+<br>
 
+### _Building job accessibility index in ModelBuilder_
+
+- Step 1: Create a job competition OD (Origin-Destination) Matrix
+- Step 2: Normalize jobs at the census tract level
+- Step 3: Create access to reachable jobs (within a 30-minute drive) OD Matrix
+- Step 4: Calculate job accessibility
+- Step 5: Visualize job accessibility
