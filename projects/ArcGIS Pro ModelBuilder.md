@@ -58,7 +58,7 @@ $`f(d_{ij} = e^{-\beta(k) \cdot t}`$ (time decay funtion, $`b`$ = non-negative t
 
 _Note. Area type is categorized as Metropolitan area, Small town, or Rural area based on [USDA Rural-Urban Commuting Area Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/)_
 
-#### _Pre-processing data_
+### _Pre-processing data_
 First, I aggregate total number of low-paying jobs and workers (less than $1,250/month) at census tract, respectively. The trick is that [LEHD LODES]([https://lehd.ces.census.gov/](https://lehd.ces.census.gov/data/)) is linked employer-household data. Aggregating low-paying Origin-Destination (OD) trips at Residence Census Block Code is equivalent to obtaining the number of low-paying workers at census block. The same applies to aggregating low-paying OD trips at Work Census Block Code, which is tantamount to obtaining the number of jobs at census block. However, I aggregate them at census tract for calculating job accessibility index (steps can be found [here](../miscellaneous/low_paying_worker_job.ipynb)), as it is the most commonly used geographic unit found in existing literature.
 
 Secondly, I export them as csv files then bring them into ArcGIS Pro. I use export table tool on them before joining them into census tract. I generate census tract centroid, then add two fields 'low_job' and 'low_worker' both as DOUBLE data type. Then calculate 'low_job' after the first join, then remove join. Do it the same for 'low_worker.'
