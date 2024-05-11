@@ -65,7 +65,7 @@ Secondly, I export them as csv files then bring them into ArcGIS Pro. I use expo
 
 <br>
 
-#### _Classify rural-urban census tract_
+### _Classify rural-urban census tract_
 I classify census tracts into three categories: Metropolitan, Small town, and Rural based on the classification provided by [USDA Rural-Urban Commuting Area Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/). However, 2020 classification would be released no earlier than Fall 2024, so I use the classification of 2010 on census tracts 2020 with some modification as follows:
 - I add 2010 census tract from ArcGIS Online then use copy feature tool (cannot edit the layer import from ArcGIS Online).
 - Filter out records regarding Georgia then export to csv file. Then export to table in ArcGIS Pro.
@@ -88,7 +88,7 @@ def area_type(x):
 
 <br>
 
-#### _Assign time decay coefficient to the corresponding census tract_
+### _Assign time decay coefficient to the corresponding census tract_
 We estimate travel time decay coefficient [here](../miscellaneous/Time-decay-coefficient-for-gravity-based-job-accessibility-index.ipynb). The time decay coefficients can be thought as penalizing the desirability of jobs that are further away than the closer jobs, meaning that the desirability of job and distance from job seeker's residential location is inverse relationship. To assign the corresponding coefficient:
 - I add a text field 'TimeDecay_Beta' in the result of spatial join done in previous step
 - Calculate the field by using:
