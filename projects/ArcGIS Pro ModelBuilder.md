@@ -131,6 +131,11 @@ CTID_lowjob = !GEOID! + "-" +str(int(!low_job!))
 ```
 <br>
 Secondly, add another text field 'Worker_Beta' to ocncatenate total worker in each census tract and time decay coefficient
+
 ```python
 Worker_Beta = str(int(!low_worker!)) + "-" +str(!TimeDecay_Beta!)
 ```
+
+Next, we filter out census tracts that don't have low-paying jobs.
+
+
