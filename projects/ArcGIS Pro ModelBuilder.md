@@ -16,7 +16,11 @@ In the majority of analyses concerning bike share demand, researchers employ a E
 
 I create a tool to generate network distances of 300, 500, and 800 meters. Below is a demonstration of creating a Network Distance Thiessen Buffer using 300-meter buffer as an example. I first create this in ModelBuilder and then convert it into a tool in ArcGIS Pro.
 
-https://github.com/rc-tsai/gis-portfolio/assets/139235338/81fc279a-0cfa-41cf-81b0-c083649acfcb
+
+
+https://github.com/rc-tsai/gis-portfolio/assets/139235338/a68ba4d0-bb21-4f6c-a2d6-fa9eae097ea8
+
+
 
 <br><br>
 
