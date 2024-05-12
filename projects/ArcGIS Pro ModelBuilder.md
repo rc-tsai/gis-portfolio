@@ -88,11 +88,11 @@ Secondly, I export the aggregated data as CSV files and then import them into Ar
 <br>
 
 ### _Classify rural-urban census tract_
-I classify census tracts into three categories: Metropolitan, Small town, and Rural based on the classification provided by [USDA Rural-Urban Commuting Area Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/). However, 2020 classification would be released no earlier than Fall 2024, so I use the classification of 2010 on census tracts 2020 with some modification as follows:
-- I add 2010 census tract from ArcGIS Online then use copy feature tool (cannot edit the layer import from ArcGIS Online).
-- Filter out records regarding Georgia then export to csv file. Then export to table in ArcGIS Pro.
-- Join the table to 2010 census tract (I add a census tract text field in the export table unlike GEOID_NUM as DOUBLE data type when join low-paying workers and jobs)
-- Add a text field 'Area_Type' and use the following classification to calculate 'Area_Type'
+I classify census tracts into three categories: Metropolitan, Small town, and Rural based on the classification provided by [USDA Rural-Urban Commuting Area Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/). However, 2020 classification [would be released no earlier than Fall 2024](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/#:~:text=Currently%2C%20we%20estimate%20that%20the%202020%20RUCA%20codes%20would%20be%20released%20no%20earlier%20than%20Fall%202024), so I use the classification of 2010 on census tracts 2020 with some modification as follows:
+- I add the 2010 census tracts from ArcGIS Online and then utilize the Copy Feature tool (as the layer imported from ArcGIS Online cannot be edited directly)
+- I filter out records pertaining to Georgia and then export these to a CSV file, which is subsequently imported as a table in ArcGIS Pro
+- I join this table to the 2010 census tracts. Unlike the 'GEOID_NUM', which is a DOUBLE data type used in joining low-paying workers and jobs, I add a text field in the export table
+- I add a text field named 'Area_Type' and apply the following classification to calculate 'Area_Type':
 ```python
 Area_Type = area_type(!RUCA!)
 
@@ -104,14 +104,15 @@ def area_type(x):
     else:
         return "Rural"
 ```
-- Use feature to point to generate 2020 census tract centroid
-- Perform spatial join using 2020 census tract centroid as target feature and 2010 census tract polygon as join feature
-- Now we classify 2020 census tract into three categories
+- Utilize the "Feature to Point" tool to generate centroids for the 2020 census tracts
+- Perform a spatial join, using the 2020 census tract centroids as the target feature and the 2010 census tract polygons as the join feature
+- We now classify the 2020 census tracts into three categories
 
 <br>
 
 ### _Assign time decay coefficient to the corresponding census tract_
-We estimate travel time decay coefficient [here](../miscellaneous/Time-decay-coefficient-for-gravity-based-job-accessibility-index.ipynb). The time decay coefficients can be thought as penalizing the desirability of jobs that are further away than the closer jobs, meaning that the desirability of job and distance from job seeker's residential location is inverse relationship. To assign the corresponding coefficient:
+I estimate the travel time decay coefficient [here](../miscellaneous/Time-decay-coefficient-for-gravity-based-job-accessibility-index.ipynb). Time decay coefficients are used to penalize the desirability of jobs that are located further away relative to closer ones, indicating an inverse relationship between the desirability of a job and the distance from the job seeker's residential location. To assign the corresponding coefficient:
+
 - I add a text field 'TimeDecay_Beta' in the result of spatial join done in previous step
 - Calculate the field by using:
 ```python
@@ -129,7 +130,7 @@ def beta(x):
 
 To derive the job accessibility index, I first normalize the total low-paying jobs at census tract by the total number of low-paying workers that can reach those jobs in that census tract. By doing so, the index accounts for job competition among job seekers. I calculate the job access index in two steps:
 
-1. Normalize jobs at census tract
+1. Normalize jobs at the census tract level
 2. Calculate reachable normalized jobs from each census tract
 
 <br>
@@ -146,7 +147,7 @@ This is normalized jobs at ceneus tract:
 </p>
 <br>
 
-### _Normalize jobs at census tract_
+### _Normalize jobs at the census tract level_
 First, add a text field 'CTID_lowjob' to concatenate census tract GEOID and 'low_job'
 ```python
 CTID_lowjob = !GEOID! + "-" +str(int(!low_job!))
@@ -163,8 +164,6 @@ Next, we filter out census tracts that don't have low-paying jobs.
 <br>
 
 ### _Building job accessibility index in ModelBuilder_
-
-<br>
 
 - Step 1: Create a job competition OD (Origin-Destination) Matrix
 
