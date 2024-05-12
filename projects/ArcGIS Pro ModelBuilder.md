@@ -163,7 +163,38 @@ Next, we filter out census tracts that don't have low-paying jobs.
 ### _Building job accessibility index in ModelBuilder_
 
 - Step 1: Create a job competition OD (Origin-Destination) Matrix
+<div style="text-align: center;">
+  <img src="../images/ArcGIS Pro ModelBuilder/STEP1 Job Competition OD Matrix.png" alt="ArcGIS ModelBuilder Workflow" style="width: 100%; height: auto;">
+</div>
+
+<br>
+
 - Step 2: Normalize jobs at the census tract level
+
+<p align="center">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP2 Normalize Job.png">
+</p>
+
+<br>
+
 - Step 3: Create access to reachable jobs (within a 30-minute drive) OD Matrix
+
+<p align="center">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP3 Job Access OD Matrix.png">
+</p>
+
+<br>
+
 - Step 4: Calculate job accessibility
+
+<p align="center">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP4 Calculate Job Accessibility.png">
+</p>
+
+<br>
+
 - Step 5: Visualize job accessibility
+
+<p align="center">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP5 Visualize Job Accessibility.png">
+</p>
