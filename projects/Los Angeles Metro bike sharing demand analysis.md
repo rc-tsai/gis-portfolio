@@ -33,7 +33,7 @@ Bike sharing demand in urban environment is influenced by multiple factors inclu
 #### _Bike station buffer_
 In order to conduct the station-level analysis, the buffer with bike station is set to 300 meters as it is the appropriate buffer reported by a couple bike sharing demand analysis modeling papers.I construct Thiessen-Polygon buffer for each bike share station with road network distance (see ArcGIS ModelBuilder for detailed workflow). As a result, each observed characteristic (which will be addressed in the following section) is assigned to the nearest bike station given that the first law of geography is that “everything is related to everything else, but near things are more related than distant things.”
 
-<p align="center">Bike station Thiessen-Polygon Buffer</p>
+<p align="center">Bike station Network Distance Thiessen Buffer</p>
 <p align="center">
   <img width="60%" height="60%" src="../images/LA Metro/ZoomIn.png">
 </p>
