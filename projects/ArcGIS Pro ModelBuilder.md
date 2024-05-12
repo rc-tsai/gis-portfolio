@@ -6,7 +6,7 @@
 
 
 ## Euclidean and Network distance Thiessen Buffer
-In the majority of analyses concerning bike share demand, researchers employ a Euclidean buffer to examine the attractions surrounding bike stations. However, this method may lead to biased results, despite the apparent similarity in coverage produced by both Euclidean and network distances. The advantage of creating buffers by integrating Thiessen polygons is that every attraction within the buffer is located closer to the corresponding bike station. The following images illustrate the differences between Thiessen buffers using Euclidean and network distances.
+In the majority of analyses concerning bike share demand, researchers employ a Euclidean buffer to examine the attractions surrounding bike stations. However, this method may lead to biased results, despite the apparent similarity in coverage produced by both Euclidean and network distances. The advantage of creating buffers by integrating Thiessen polygons is that every attraction within the buffer is located closer to the corresponding bike station. The following images illustrate the differences between Thiessen buffers using Euclidean and network distances. Learn more about my bike-sharing demand analysis project [here](../images/projects/Los-Angeles-Metro-bike-sharing-demand-analysis.md).
 <br><br>
 
 | Euclidean distance | Network distance |
@@ -15,7 +15,7 @@ In the majority of analyses concerning bike share demand, researchers employ a E
 
 <br><br>
 
-I create a tool to generate network distances of 300, 500, and 800 meters. Below is a demonstration of creating a Network Distance Thiessen Buffer using 300-meter buffer as an example. I first create this in ModelBuilder and then convert it into a tool in ArcGIS Pro.
+I create a tool to generate network distances of 300, 500, and 800 meters. Below is a demonstration of creating Network Distance Thiessen Buffer using 300-meter buffer as an example. I first create this in ModelBuilder and then convert it into a tool in ArcGIS Pro.
 
 
 
@@ -36,12 +36,12 @@ The following workflow delineates the steps involved in creating a Network Dista
 </div>
 <br>
   
-- First, construct buffer from points <br>
-- Second, create Thiessen polygon from points <br>
-- Third, extract Thiessen polygon line by using Polygon to Line tool <br>
-- Fourth, use Intersect tool for the results from the first and third steps <br>
-- Fifth, extract buffer boundary by usingi Polygon to Line again on the buffer, then dissolve! <br>
-- Sixth, use Feature to Polygon on the results from Fourth and Fifth steps. <br>
+- First, construct 300m service area (Network Analyst) from points
+- Second, create Thiessen polygons from points
+- Third, extract the Thiessen polygon lines using the Polygon to Line tool
+- Fourth, use the Intersect tool on the results from the first and third steps
+- Fifth, extract the buffer boundary by using Polygon to Line again on the buffer, then dissolve
+- Sixth, use Feature to Polygon on the results from the fourth and fifth steps
 
 <br><br>
 
@@ -80,9 +80,10 @@ _Note. Area type is categorized as Metropolitan area, Small town, or Rural area 
 ## _Pre-processing data_
 
 ### _Obtaining jobs and workers at the census tract level_
-First, I aggregate total number of low-paying jobs and workers (less than $1,250/month) at census tract, respectively. The trick is that [LEHD LODES]([https://lehd.ces.census.gov/](https://lehd.ces.census.gov/data/)) is linked employer-household data. Aggregating low-paying Origin-Destination (OD) trips at Residence Census Block Code is equivalent to obtaining the number of low-paying workers at census block. The same applies to aggregating low-paying OD trips at Work Census Block Code, which is tantamount to obtaining the number of jobs at census block. However, I aggregate them at census tract for calculating job accessibility index (steps can be found [here](../miscellaneous/low_paying_worker_job.ipynb)), as it is the most commonly used geographic unit found in existing literature.
 
-Secondly, I export them as csv files then bring them into ArcGIS Pro. I use export table tool on them before joining them into census tract. I generate census tract centroid, then add two fields 'low_job' and 'low_worker' both as DOUBLE data type. Then calculate 'low_job' after the first join, then remove join. Do it the same for 'low_worker.'
+Initially, I aggregate the total number of low-paying jobs and workers (earning less than $1,250/month) at the census tract level, respectively. It is important to note that the [LEHD LODES](https://lehd.ces.census.gov/data/) data, which links employer-household information, facilitates this process. Aggregating low-paying Origin-Destination (OD) trips at the Residence Census Block Code effectively yields the number of low-paying workers at the census block level. Similarly, aggregating low-paying OD trips at the Work Census Block Code corresponds to obtaining the number of jobs at the census block level. However, for the purpose of calculating the job accessibility index, I aggregate this data at the census tract level, which is the most commonly used geographic unit in existing literature. Further details on the steps involved can be found [here](../miscellaneous/low_paying_worker_job.ipynb).
+
+Secondly, I export the aggregated data as CSV files and then import them into ArcGIS Pro. Utilizing the Export Table tool, I prepare the data before joining it to the corresponding census tract. Subsequently, I generate centroids for each census tract and add two fields: 'low_job' and 'low_worker', both of which are designated as DOUBLE data types. I calculate the 'low_job' values following the initial join and then remove the join. I repeat the same process for 'low_worker.'
 
 <br>
 
