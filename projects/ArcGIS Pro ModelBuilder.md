@@ -4,6 +4,7 @@
 
 <br><br>
 
+
 ## Euclidean and Network distance Thiessen Buffer
 In the majority of analyses concerning bike share demand, researchers employ a Euclidean buffer to examine the attractions surrounding bike stations. However, this method may lead to biased results, despite the apparent similarity in coverage produced by both Euclidean and network distances. The advantage of creating buffers by integrating Thiessen polygons is that every attraction within the buffer is located closer to the corresponding bike station. The following images illustrate the differences between Thiessen buffers using Euclidean and network distances.
 <br><br>
@@ -56,7 +57,7 @@ This video demonstrates the steps involved in constructing a job accessibility i
 
 <br>
 
-The following are the steps for preparing data to build a job accessibility index. First, let's review the gravity-based job accessibility index as follows:
+The following section contains the steps for preparing data to build a job accessibility index. First, let's review the gravity-based job accessibility index as follows:
 
 <br>
 <p align="center">
@@ -162,6 +163,8 @@ Next, we filter out census tracts that don't have low-paying jobs.
 
 ### _Building job accessibility index in ModelBuilder_
 
+<br>
+
 - Step 1: Create a job competition OD (Origin-Destination) Matrix
 
 <p align="center">
@@ -189,7 +192,7 @@ Next, we filter out census tracts that don't have low-paying jobs.
 - Step 4: Calculate job accessibility
 
 <p align="center">
-  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP4 Calculate Job Accessibility.png">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP4_Calculate_Job_Accessibility.png">
 </p>
 
 <br>
@@ -197,5 +200,5 @@ Next, we filter out census tracts that don't have low-paying jobs.
 - Step 5: Visualize job accessibility
 
 <p align="center">
-  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP5 Visualize Job Accessibility.png">
+  <img width="100%" height="100%" src="../images/ArcGIS Pro ModelBuilder/STEP5_Visualize_Job_Accessibility.png">
 </p>
