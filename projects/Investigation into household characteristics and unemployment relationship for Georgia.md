@@ -2,7 +2,6 @@
 - [Background](#Background)<br>
 - [Variable selection](#Variable-selection-Return-to-Contents)<br>
 - [Data](#Data-Return-to-Contents)
-- [Data assembly](#Data-assembly-Return-to-Contents)<br>
 - [Methods](#Methods-Return-to-Contents)<br>
 - [Result](#Result-Return-to-Contents)
 <br><br><br>
@@ -87,7 +86,7 @@ The data used for this project is from US Census Bureau and Longitudinal Employe
 
 <br><br><br>
 
-## Methods (Return to [Contents](#Contents))
+## Methods (return to [Contents](#Contents))
 For this project, I use three different methods include:
 1) Gravity-based Accessibility Measure
 2) Ordinary Least Regression
