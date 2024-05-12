@@ -17,7 +17,7 @@ A body of literature has examined unemployment at both macro and micro levels, e
 
 <br><br>
 
-## Variable selection (Return to [Contents](#Contents))
+## Variable selection (return to [Contents](#Contents))
 <br>
 
 _Social benefits (Public Assistance Income)_ <br>
@@ -77,7 +77,7 @@ This computation results in either a positive or negative integer. The positive 
 </p>
 <br><br><br><br>
 
-## Data (Return to [Contents](#Contents))
+## Data (return to [Contents](#Contents))
 The data used for this project is from US Census Bureau and Longitudinal Employer-Household Dynamics (LEHD) Origin-Destination Employment Statistics (LODES). 
 
 |               | Advantage                                                                                                       | Disadvantage                                                                                                                                                                                                                                                                                    |
@@ -149,4 +149,4 @@ Following is the job accessibility index for Georgia at census tract level.
 
 <br>
 
-## Result (Return to [Contents](#Conents))
+## Result (return to [Contents](#Conents))
