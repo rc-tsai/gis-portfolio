@@ -5,6 +5,7 @@ This is Rueichen's portfolio showcasing some GIS analyses he has completed. Plea
 <br>
 
 Spatial Analysis
+- [ArcGIS Pro ModelBuilder](projects/ArcGIS%20Pro%20ModelBuilder.md)
 - [Suitability Analysis for Bald Eagle](./projects/Suitability%20Analysis%20for%20Bald%20Eagle.md)
 - [Los Angeles Metro bike sharing demand analysis](./projects/Los%20Angeles%20Metro%20bike%20sharing%20demand%20analysis.md)
 - [Investigation into household characteristics and unemployment relationship for Georgia](./projects/Investigation%20into%20household%20characteristics%20and%20unemployment%20relationship%20for%20Georgia.md) (currently uploading)
