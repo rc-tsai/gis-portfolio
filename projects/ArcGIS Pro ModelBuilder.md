@@ -115,7 +115,7 @@ def area_type(x):
 <br>
 
 ### _Assign time decay coefficient to the corresponding census tract_
-I estimate the travel time decay coefficient [here](https://github.com/rc-tsai/gis-portfolio/blob/main/miscellaneous/Time%20decay%20coefficient%20for%20gravity-based%20job%20accessibility%20index.ipynb). Time decay coefficients are used to penalize the desirability of jobs that are located further away relative to closer ones, indicating an inverse relationship between the desirability of a job and the distance from the job seeker's residential location. To assign the corresponding coefficient:
+I estimate the travel time decay coefficient [here](../miscellaneous/Time%20decay%20coefficient%20for%20gravity-based%20job%20accessibility%20index.ipynb). Time decay coefficients are used to penalize the desirability of jobs that are located further away relative to closer ones, indicating an inverse relationship between the desirability of a job and the distance from the job seeker's residential location. To assign the corresponding coefficient:
 
 - I add a text field 'TimeDecay_Beta' in the result of spatial join done in previous step
 - Calculate the field by using:
