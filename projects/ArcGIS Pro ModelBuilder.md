@@ -1,6 +1,6 @@
 ## Contents
 - ModelBuilder Example I: [Euclidean and Network distance Thiessen Buffer](#Euclidean-and-Network-distance-Thiessen-Buffer)
-- ModelBuilder Example II: [Gravity-based job accessibility index](#Gravity-based-job-accessibility-index-(return-to-Contents))
+- ModelBuilder Example II: [Gravity-based job accessibility index](#Gravity-based-job-accessibility-index)
 
 <br><br>
 
