@@ -1,7 +1,6 @@
 ## Contents
 - ModelBuilder Example I: [Euclidean and Network distance Thiessen Buffer](#Euclidean-and-Network-distance-Thiessen-Buffer)
 - ModelBuilder Example II: [Gravity-based job accessibility index](#Gravity-based-job-accessibility-index-(return-to-Contents))
-[Gravity-based job accessibility index](#gravity-based-job-accessibility-index)
 
 <br><br>
 
@@ -48,7 +47,7 @@ The following workflow delineates the steps involved in creating a Network Dista
 
 <br><br>
 
-## Gravity-based job accessibility index (return to [Contents](#Contents))
+## Gravity-based job accessibility index
 
 <br>
 
