@@ -47,7 +47,7 @@ The following workflow delineates the steps involved in creating a Network Dista
 
 <br><br>
 
-## Gravity-based job accessibility index
+## Gravity-based job accessibility index (return to [Contents](#Contents))
 
 <br>
 
