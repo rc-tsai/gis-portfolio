@@ -6,7 +6,9 @@
 
 
 ## Euclidean and Network distance Thiessen Buffer
-In the majority of analyses concerning bike share demand, researchers employ a Euclidean buffer to examine the attractions surrounding bike stations. However, this method may lead to biased results, despite the apparent similarity in coverage produced by both Euclidean and network distances. The advantage of creating buffers by integrating Thiessen polygons is that every attraction within the buffer is located closer to the corresponding bike station. The following images illustrate the differences between Thiessen buffers using Euclidean and network distances. Learn more about my bike-sharing demand analysis project [here](../images/projects/Los-Angeles-Metro-bike-sharing-demand-analysis.md).
+In the majority of analyses concerning bike share demand, researchers employ a Euclidean buffer to examine the attractions surrounding bike stations. However, this method may lead to biased results, despite the apparent similarity in coverage produced by both Euclidean and network distances. The advantage of creating buffers by integrating Thiessen polygons is that every attraction within the buffer is located closer to the corresponding bike station. The following images illustrate the differences between Thiessen buffers using Euclidean and network distances. Learn more about my bike-sharing demand analysis project [here](https://github.com/rc-tsai/gis-portfolio/blob/main/projects/Los%20Angeles%20Metro%20bike%20sharing%20demand%20analysis.md).
+
+
 <br><br>
 
 | Euclidean distance | Network distance |
