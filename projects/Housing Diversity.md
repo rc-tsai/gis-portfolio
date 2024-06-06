@@ -25,13 +25,31 @@ Housing diversity index contains three formulas as follows:
 #### Proportions calculation formula
 
 <p align="center">
-  <img width="60%" height="60%" src="../images/Housing Diversity/proportions.png">
+  <img width="100%" height="100%" src="../images/Housing Diversity/proportions.png">
 </p>
 
-![Image Description](../images/Housing-Diversity/proportions.png)
+<br>
 
+#### Log of the proportions calculation formula
 
-<p align="center">Bike station Network Distance Thiessen Buffer</p>
 <p align="center">
-  <img width="60%" height="60%" src="../images/Housing_Diversity/proportions.png">
+  <img width="100%" height="100%" src="../images/Housing Diversity/log of the proportions.png">
 </p>
+
+<br>
+
+#### Product of the proportions and their respective logs formula
+
+<p align="center">
+  <img width="100%" height="100%" src="../images/Housing Diversity/product of the proportions.png">
+</p>
+
+<br>
+
+## Housing Diversity Index for Georgia state
+
+<p align="center">
+  <img width="80%" height="80%" src="../images/Housing Diversity/HDIndex.jpg">
+</p>
+
+I chose to use natural break classification to map the housing diversity index. Given the nature of natural break classification, we can see the housing diversity comparison more vividly across urban and rural areas in Georgia. Housing diversity is usually higher in urbanized areas, especially in part of the Atlanta Metropolitan Area (AMA). The areas with higher housing diversity in AMA seems to located along highway.
