@@ -15,7 +15,7 @@ Spatial Analysis
 
 ArcGIS Storymaps/Webmap
 - [Where to live in Atlanta?](https://arcg.is/1jGyrP1)
-- [ArcGIS StoryMaps: Exploring Black-Owned Businesses in Santa Monica](https://storymaps.arcgis.com/stories/f7c76b9b234149178b424a20956ff7ce)
+- [Exploring Black-Owned Businesses in Santa Monica](https://storymaps.arcgis.com/stories/f7c76b9b234149178b424a20956ff7ce)
 - [Norwood Elementary Broken Sidewalks](https://www.arcgis.com/home/item.html?id=ba13d7144a714eb9884e30dd0cd02005)
 
 
